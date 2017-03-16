@@ -35,9 +35,9 @@
 <div class="login">
 	<h2>Login</h2>
 	<form action="login.php" method="post">
-		<input type="text" class="user active" value="User name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'User name';}"/>
-		<input type="password" class="lock active" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}"/>
-	</form>
+		<input type="text" name="username" placeholder="username" class="user active" value="User name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'User name';}"/>
+		<input type="password" name="password" placeholder="password" class="lock active" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}"/>
+
 	<div class="forgot">
 		 <div class="login-check">
  			 <label class="checkbox"><input type="checkbox" name="checkbox" checked><i> </i> Remember Me</label>
@@ -48,7 +48,6 @@
  		 </div>
 		<div class="clear"> </div>
 	</div>
-	<form action="login.php" method="post">
 	<div class="login-bwn">
 	   <input type="submit" name="submit" value="Log in" />
 	</form>

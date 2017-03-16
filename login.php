@@ -1,4 +1,5 @@
 <?php
+
 include("dbconnect.php"); // Establishing connection with our database
 if(empty($_POST[ "username"]) || empty($_POST[ "password"]))
  {
@@ -8,7 +9,7 @@ if(empty($_POST[ "username"]) || empty($_POST[ "password"]))
      $username=$_POST['username'];
      $password=$_POST['password'];
 
-$sql ="SELECT uid FROM users WHERE username='$username' and password='$password' ";
+$sql = "SELECT uid FROM users WHERE username='$username' and password='$password'; ";
 $result = mysqli_query($db,$sql);
 if( mysqli_num_rows($result) == 1)
  {
@@ -18,4 +19,10 @@ if( mysqli_num_rows($result) == 1)
      echo "Incorrect username or password. ";
  }
 }
+
+$result->close();
+$db->close();
+
+
 ?>
+

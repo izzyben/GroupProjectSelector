@@ -12,6 +12,12 @@
     <input type="text" name="username" placeholder="Username" /><br><br>
     <input type="password" name="password" placeholder="Password" /><br><br>
     <input type="submit" name="submit" value="Log In" />
+    <?php
+    $reasons = array("password"=>"Wrong Username or Password", "blank"=> "You have left one or more fields blank.");
+    if ($_GET["loginFailed"]){
+        echo $reasons[$_GET["reason"]];
+    }
+    ?>
 </form>
 
 </body>

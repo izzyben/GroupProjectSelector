@@ -51,7 +51,7 @@
 	<div class="login-bwn">
 	   <input type="submit" name="submit" value="Log in" /><br/><br/>
 		<?php
-		$reasons = array("password" = "Wrong Username or Password", "blank" = "You have left one or more fields blank.");
+		$reasons = array("password"=>"Wrong Username or Password", "blank"=>"You have left one or more fields blank.");
 		if ($_GET["loginFailed"]){
 		echo $reasons[$_GET["reason"]];
 		}

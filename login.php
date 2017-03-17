@@ -13,11 +13,15 @@ $sql = "SELECT uid FROM users WHERE username='$username' and password='$password
 $result = mysqli_query($db,$sql);
 if( mysqli_num_rows($result) == 1)
  {
-     die(header("location: home.php")); // Redirecting To another Page
+     header("location: home.php"); // Redirecting To another Page
  }
  else
  {
-     die(header("location:index.html?loginFailed=true&reason=password"));
+     echo "<script language=\"JavaScript\">\n";
+     echo "alert('Username or Password was incorrect!');\n";
+     echo "window.location='index.html'";
+     echo "</script>";
+     //die(header("location:index.html?loginFailed=true&reason=password"));
      //echo "Incorrect username or password. ";
  }
 }

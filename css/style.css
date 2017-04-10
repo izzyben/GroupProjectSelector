@@ -46,9 +46,6 @@ hr {
     margin: auto;
 }
 
-#slideshowhover {
-    background-color: rgba(0,0,0,0.8);
-}
 
 .myslides {
     display: inherit;
@@ -68,9 +65,21 @@ hr {
     border-radius: 0 3px 3px 0;
 }
 
+#prevpic:hover, .nextpic:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
 .nextpic {
     right: 0;
     border-radius: 3px 0 0 3px;
+}
+
+.picnumber {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
 }
 
 html {box-sizing:border-box}

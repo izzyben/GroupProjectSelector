@@ -48,7 +48,7 @@ hr {
 
 
 .myslides {
-    display: inherit;
+    display: none;
 }
 
 #prevpic, .nextpic{

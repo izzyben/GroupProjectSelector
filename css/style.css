@@ -51,7 +51,7 @@ hr {
 }
 
 .myslides {
-    display: none;
+    display: inherit;
 }
 
 #prevpic, .nextpic{

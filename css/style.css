@@ -50,4 +50,8 @@ hr {
     background-color: rgba(0,0,0,0.8);
 }
 
+#myslides {
+    display: none;
+}
+
 html {box-sizing:border-box}

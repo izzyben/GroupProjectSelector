@@ -176,7 +176,15 @@ hr {
 }
 
 .modal-form {
-
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    width: 500px;
+    margin: auto;
+    background-color: #fff;
+    position: relative;
+    padding: 0;
+    outline: 0;
+    box-sizing: inherit;
+    display: block;
 }
 
 .modal-center{
@@ -297,6 +305,10 @@ hr {
 /* Add Zoom Animation */
 .animate {
     -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+.animate-zoom {
     animation: animatezoom 0.6s
 }
 

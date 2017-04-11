@@ -120,3 +120,7 @@ hr {
     from {opacity: .4}
     to {opacity: 1}
 }
+
+#login:hover {
+    background-color: crimson;
+}

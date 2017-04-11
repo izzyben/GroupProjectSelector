@@ -31,6 +31,10 @@ hr {
     margin: 20px 0;
 }
 */
+body {
+color: #cccccc;
+}
+
 #navmenu {
     text-align: right;
 }

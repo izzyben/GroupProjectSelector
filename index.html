@@ -9,11 +9,11 @@
 
     <link rel="stylesheet" href="/css/style.css" type="text/css" /> <!--Link to My Stylesheet-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"> <!--Link to Font Awesome Library-->
-    <script type="text/javascript" src="Javascript/script.js" rel="section"></script>
+    <script type="text/javascript" src="Javascript/script.js"></script>
 
 </head>
 
-<body>
+<body onload="carousel()">
 
 <!-- Navigation Bar -->
 <nav>
@@ -21,8 +21,8 @@
     <nav id="navmenu">
 
     <button id="login" onclick="document.getElementById('id01').style.display='block'">Login</button>
-    <a href="#register" class="w3-button w3-bar-item">Register</a>
-    <a href="#contact" class="w3-button w3-bar-item">Contact</a>
+    <a id="register" class="w3-button w3-bar-item">Register</a>
+    <a id="contact" class="w3-button w3-bar-item">Contact</a>
     </nav>
 </nav>
 <br>
@@ -98,23 +98,22 @@
 <br>
 
 <!--Javascript for the Slideshow-->
-   <script type="text/javascript" src="Javascript/script.js">
-//        var slideIndex = 0;
-//        showSlides();
-//
-//        function showSlides() {
-//            var i;
-//            var slides = document.getElementsByClassName("Slides");
-//            for (i = 0; i < slides.length; i++) {
-//                slides[i].style.display = "none";
-//            }
-//            slideIndex++;
-//            if (slideIndex> slides.length) {slideIndex = 1}
-//            slides[slideIndex-1].style.display = "block";
-//            setTimeout(showSlides, 5000); // Change image every 5 seconds
-//        }
-       carousel()
-    </script>
+   <!--<script type="text/javascript" src="Javascript/script.js" >-->
+<!--//        var slideIndex = 0;-->
+<!--//        showSlides();-->
+<!--//-->
+<!--//        function showSlides() {-->
+<!--//            var i;-->
+<!--//            var slides = document.getElementsByClassName("Slides");-->
+<!--//            for (i = 0; i < slides.length; i++) {-->
+<!--//                slides[i].style.display = "none";-->
+<!--//            }-->
+<!--//            slideIndex++;-->
+<!--//            if (slideIndex> slides.length) {slideIndex = 1}-->
+<!--//            slides[slideIndex-1].style.display = "block";-->
+<!--//            setTimeout(showSlides, 5000); // Change image every 5 seconds-->
+<!--//        }-->
+    <!--</script>-->
 
 <!--Second Section-->
 <section class="w3-container w3-center" style="max-with:600px">

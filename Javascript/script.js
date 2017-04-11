@@ -7,7 +7,6 @@ var myIndex = 0;
 carousel();
 
 function carousel() {
-    var myIndex = 0;
     var i;
     var x = document.getElementsByClassName("mySlides");
     for (i = 0; i < x.length; i++) {
@@ -18,3 +17,17 @@ function carousel() {
     x[myIndex-1].style.display = "block";
     setTimeout(carousel, 5000);
 }
+
+
+<!--Javascript for the Modal Form-->
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+

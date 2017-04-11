@@ -121,9 +121,43 @@ hr {
     to {opacity: 1}
 }
 
+#login{
+    box-shadow: none;
+    color: #FFFFFF;
+    background-color: forestgreen;
+    font-size: 18px;
+    transition: background-color .25s,color .15s,box-shadow .15s,opacity .25s,filter .25s,border .15s;
+    user-select: none;
+    border: none;
+    display: inline-block;
+    outline: 0;
+    padding: 6px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
 #login:hover {
     box-sizing: content-box;
     background-color: rgba(0,0,0,0.8);
+}
+
+button {
+    -webkit-appearance: button;
+    font: inherit;
+    margin: 0;
+    text-transform: none;
+    align-items: flex-start;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-indent: 0px;
+    text-shadow: none;
+    -webkit-writing-mode: horizontal-tb;
+
 }
 
 /* The Modal (background) */

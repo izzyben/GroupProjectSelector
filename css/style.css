@@ -42,7 +42,7 @@ hr {
 
 #slideshow {
     max-width: 1000px;
-    position: relative;
+    position: inherit;
     margin: auto;
 }
 

@@ -72,7 +72,7 @@
 
 
 <!-- Slide Show Section -->
-<section class="slideshow" onload="carousel()">
+<section class="slideshow">
     <section class="Slides fade">
         <img src="images/groupwork.jpg" style="width:100%" height="500"/>
     </section>
@@ -98,25 +98,25 @@
 <br>
 
 <!--Javascript for the Slideshow-->
-   <!--<script type="text/javascript" src="Javascript/script.js" >-->
-<!--//        var slideIndex = 0;-->
-<!--//        showSlides();-->
-<!--//-->
-<!--//        function showSlides() {-->
-<!--//            var i;-->
-<!--//            var slides = document.getElementsByClassName("Slides");-->
-<!--//            for (i = 0; i < slides.length; i++) {-->
-<!--//                slides[i].style.display = "none";-->
-<!--//            }-->
-<!--//            slideIndex++;-->
-<!--//            if (slideIndex> slides.length) {slideIndex = 1}-->
-<!--//            slides[slideIndex-1].style.display = "block";-->
-<!--//            setTimeout(showSlides, 5000); // Change image every 5 seconds-->
-<!--//        }-->
-    <!--</script>-->
+   <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("Slides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex> slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 5000); // Change image every 5 seconds
+        }
+    </script>
 
 <!--Second Section-->
-<section class="w3-container w3-center" style="max-with:600px">
+<section class="w3-container w3-center" style="max-width:600px">
     <h2 class="w3-wide">THE BAND</h2>
     <p class="w3-opacity"><i>We love music</i></p>
 </section>

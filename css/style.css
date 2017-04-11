@@ -110,7 +110,7 @@ html {box-sizing:border-box}
 /* Slideshow container */
 .slideshow-container {
     max-width: 1000px;
-    position: fixed;
+    position: absolute;
     margin: auto;
 }
 

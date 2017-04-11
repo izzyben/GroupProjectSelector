@@ -122,6 +122,6 @@ hr {
 }
 
 #login:hover {
-    box-sizing: border-box;
+    box-sizing: content-box;
     background-color: rgba(0,0,0,0.8);
 }

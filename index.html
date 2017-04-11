@@ -20,7 +20,7 @@
     <p><h1>GROUP PROJECT TEAM SELECTOR (GPTS)</h1></p>
     <nav id="navmenu">
 
-    <button id="login" onclick="document.getElementByName('popupform').style.display='block'">Login</button>
+    <button id="login" onclick="document.getElementByName('id01').style.display='block'">Login</button>
     <a id="register" class="w3-button w3-bar-item">Register</a>
     <a id="contact" class="w3-button w3-bar-item">Contact</a>
     </nav>
@@ -32,7 +32,7 @@
     <section class="modal-form animate-zoom" style="max-width: 600px; cursor: auto";>
         <section class="modal-center">
             <br>
-            <span onclick="document.getElementsByName('popupform').style.display='none'" class="closebtn form-container closebtn-position closebtn-size closebtn:hover closebtn:focus" title="Close Form">&times;</span>
+            <span onclick="document.getElementById('id01').style.display='none'" class="closebtn form-container closebtn-position closebtn-size closebtn:hover closebtn:focus" title="Close Form">&times;</span>
             <img src="images/avatar.png" alt="Login Avatar" style="width: 40%" class="login-avatar"/>
         </section>
         <section class="form-container">
@@ -45,7 +45,7 @@
                     <b>Password</b>
                 </label>
                 <input class="form-input border" type="text" name="password" placeholder="Enter Password"/>   <!--onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}"/>-->
-                <button class="button form-container-section-btn" onclick="document.getElementsByName('popupform').style.display='none'">Login</button>
+                <button class="button form-container-section-btn" onclick="document.getElementById('id01').style.display='none'">Login</button>
                 <input class="check" type="checkbox" name="checkbox" checked="checked"><i>Remember Me</i>
                 </section>
         </section>
@@ -63,8 +63,8 @@
                         <!--</section>-->
                     <!--</section>-->
         <section class=" form-container border-top padding light-grey">
-            <button onclick="document.getElementsByName('popupform').style.display='none'" type="button" class="form-cancelbtn"> Cancel</button>
-            <span class="forgotpwd-padding right">"Forgot" <a href="javascript:void(0)" onclick="document.getElementsByName('popupform').style.display='none'">password?</a> </span>
+            <button onclick="document.getElementById('id01').style.display='none'" type="button" class="form-cancelbtn"> Cancel</button>
+            <span class="forgotpwd-padding right">"Forgot" <a href="javascript:void(0)" onclick="document.getElementsById('id01').style.display='none'">password?</a> </span>
 
         </section>
     </section>
@@ -73,7 +73,7 @@
 <!--Javascript for the Modal Form-->
 <script>
     // Get the modal
-    var modal = document.getElementsByName('popupform');
+    var modal = document.getElementById('id01');
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {

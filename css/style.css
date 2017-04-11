@@ -363,8 +363,8 @@ hr {
 }
 
 /* Close button on hover */
-.close:hover,
-.close:focus {
+.closebtn:hover,
+.closebtn:focus {
     color: red;
     cursor: pointer;
 }

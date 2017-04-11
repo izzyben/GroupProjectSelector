@@ -46,7 +46,6 @@ hr {
 .slideshow {
     max-width: 100%;
     max-height: 30%;
-    border-top: crimson;
     position: relative;
     margin: auto;
 }

@@ -50,26 +50,12 @@ hr {
     margin: auto;
 }
 
-.slideshow:before, .slideshow:after {
-    overflow: hidden;
-    content: "";
-    display: table;
-}
-
-.slideshow:after {
-    clear: both;
-}
-
-
 .myslides {
-    display: inline-block;
-    float: left;
-    width: 50%;
+    display: none;
 }
 
-.myslides img {
+.img {
     width: 100%;
-    vertical-align: middle;
 }
 
 #prevpic, .nextpic{

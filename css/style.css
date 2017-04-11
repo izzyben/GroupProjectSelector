@@ -30,7 +30,7 @@ hr {
     border-top: 1px solid #eee;
     margin: 20px 0;
 }
-
+*/
 #navmenu {
     text-align: right;
 }
@@ -39,73 +39,6 @@ hr {
 
 }
 
-.slidepics {
-    width: 100%;
-
-}
-
-.slideshow {
-    max-width: 1000px;
-    position: inherit;
-    margin: auto;
-}
-
-.slideshow:before, .slideshow:after {
-    overflow: hidden;
-    content: "";
-    display: table;
-}
-
-.slideshow:after {
-    clear: both;
-}
-
-
-.myslides {
-    display: inline-block;
-    float: left;
-    width: 50%;
-}
-
-.myslides img {
-    width: 100%;
-    height: auto;
-    vertical-align: middle;
-}
-
-#prevpic, .nextpic{
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: black;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-}
-
-#prevpic:hover, .nextpic:hover {
-    background-color: rgba(0,0,0,0.8);
-}
-
-.nextpic {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-.picnumber {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-
-html {box-sizing:border-box}
-*/
 
 * {box-sizing:border-box}
 
@@ -124,7 +57,7 @@ html {box-sizing:border-box}
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.prevpic, .nextpic {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -139,13 +72,13 @@ html {box-sizing:border-box}
 }
 
 /* Position the "next button" to the right */
-.next {
+.nextpic {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
+.prevpic:hover, .nextpic:hover {
     background-color: rgba(0,0,0,0.8);
 }
 
@@ -169,9 +102,9 @@ html {box-sizing:border-box}
 /* Fading animation */
 .fade {
     -webkit-animation-name: fade;
-    -webkit-animation-duration: 2.5s;
+    -webkit-animation-duration: 1.5s;
     animation-name: fade;
-    animation-duration: 2.5s;
+    animation-duration: 1.5s;
 }
 
 @-webkit-keyframes fade {

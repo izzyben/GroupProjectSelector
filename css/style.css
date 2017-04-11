@@ -247,8 +247,6 @@ hr {
     overflow: visible;
     font: inherit;
     margin: 0;
-    margin-bottom: 16px;
-    border: 1px solid #ccc;
     box-sizing: inherit;
     -webkit-appearance: textfield;
     -webkit-writing-mode: horizontal-tb;
@@ -266,10 +264,71 @@ hr {
     text-align: start;
 }
 
+.check{
+    width: 24px;
+    height: 24px;
+    position: relative;
+    top: 6px;
+    -webkit-appearance: checkbox;
+    background-color: initial;
+    border: initial;
+}
+
+.padding {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.border-top {
+    border-top: 1px solid #ccc !important;
+}
+
+.margin-bottom{
+    margin-bottom: 16px;
+}
+
+.border{
+    border: 1px solid #ccc;
+}
+
 .closebtn-position{
     position: absolute;
     right: 0;
     top: 0;
+}
+
+.form-cancelbtn {
+    box-shadow: none;
+    color: #fff;
+    background-color: #f44336;
+    transition: background-color .25s,color .15s,box-shadow .15s,opacity .25s,filter .25s,border .15s;
+    user-select: none;
+    border: none;
+    display: inline-block;
+    outline: 0;
+    padding: 6px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    text-transform: none;
+    font: inherit;
+    margin: 0;
+    box-sizing: inherit;
+    align-items: flex-start;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-indent: 0px;
+    text-shadow: none;
+    -webkit-writing-mode: horizontal-tb;
+}
+
+.light-grey{
+    color: #000;
+    background-color: #f1f1f1;
 }
 
 .closebtn-size{

@@ -112,6 +112,7 @@
 <br>
 
 <!--Javascript for the Slideshow-->
+    <!--Automatic Slideshow-->
    <script>
         var slideIndex = 0;
         showSlides();
@@ -128,35 +129,35 @@
             setTimeout(showSlides, 5000); // Change image every 5 seconds
         }
     </script>
+    <!--Scroll through Slide Pictures-->
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
 
-<script>
-    var slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("Slides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
         }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
         }
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
-    }
-</script>
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("Slides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
 
 <!--Second Section-->
 <section class="w3-container w3-center" style="max-width:600px">

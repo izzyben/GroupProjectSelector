@@ -40,16 +40,33 @@ hr {
 
 }
 
-#slideshow {
+.slideshow {
     max-width: 1000px;
-    height: 10%;
     position: inherit;
     margin: auto;
 }
 
+.slideshow:before, .slideshow:after {
+    overflow: hidden;
+    content: "";
+    display: table;
+}
+
+.slideshow:after {
+    clear: both;
+}
+
 
 .myslides {
-    display: none;
+    display: inline-block;
+    float: left;
+    width: 50%;
+}
+
+.myslides img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
 }
 
 #prevpic, .nextpic{

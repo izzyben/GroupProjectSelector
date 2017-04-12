@@ -270,12 +270,12 @@ a {
     text-align: start;
 }
 
-.form-input input.user {
+.form-container-section input.user {
     background: url(../images/user.png)no-repeat 15px 7px #fff;
     display: block;
 }
 
-.form-input input.key {
+.form-container-section input.key {
     background: url(../images/key.png)no-repeat 15px 7px #fff;
     display: block;
 }

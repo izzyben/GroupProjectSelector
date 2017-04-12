@@ -49,22 +49,18 @@ hr {
     -webkit-margin-after: 0.5em;
     -webkit-margin-start: auto;
     -webkit-margin-end: auto;
-    padding: 0;
 }
 
 hr.hr-text{
+    padding: 0;
     border: none;
     border-top: 1px solid #eee;
     text-align: center;
     margin: 30px auto 0 auto;
-    display: inline-block;
-    position: relative;
-    top: -12px;
-    padding: 0 .5em;
-    background: #fff;
+
 }
 
-.hr-text.or{
+hr.hr-text.or{
     font-family: "futura-pt-n7","futura-pt",Tahoma,Geneva,Verdana,Arial,sans-serif;
     font-style: normal;
     font-weight: 700;

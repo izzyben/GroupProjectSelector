@@ -36,6 +36,7 @@
             <img src="images/avatar.png" alt="Login Avatar" style="width: 40%" class="login-avatar"/>
         </section>
         <section class="form-container">
+            <form action="login.php" method="post">
             <section class="form-container-section">
 
                 <input class="form-input user active  margin-bottom border" type="text" name="username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'User name';}"/>
@@ -64,7 +65,9 @@
 
                 <input class="check" type="checkbox" name="checkbox" checked="checked"><i>Remember Me</i>
                 </section>
+            </form>
         </section>
+
 
         <section class=" form-container border-top padding light-grey">
             <button onclick="document.getElementById('id01').style.display='none'" type="button" class="form-cancelbtn"> Cancel</button>

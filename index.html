@@ -81,10 +81,39 @@
     </section>
 </section>
 
-<!--Javascript for the Modal Form-->
+
+<!--Modal Registration Form-->
+<section id="id01" class="modal" style="cursor: pointer; display: none">
+    <section class="modal-form animate-zoom" style="max-width: 600px; cursor: auto";>
+        <section class="modal-center">
+            <span onclick="document.getElementById('id01').style.display='none'" class="closebtn form-container closebtn-position closebtn-size closebtn:hover closebtn:focus" title="Close Form">&times;</span>
+            <p class="subtitle">Sign up with...</p>
+            <section class="social-signup">
+                <!--Yahoo-->
+                <a class="yahoo1" href="#"><i class="yahoo2"></i><span>Yahoo</span>
+                    <section class="clear"></section>
+                </a>
+
+                <!--Facebook-->
+                <a class="facebook1" href="#"><i class="facebook2"></i><span>Facebook</span>
+                    <section class="clear"></section>
+                </a>
+
+                <!--Google+-->
+                <a class="google1" href="#"><i class="google2"></i><span>Google+</span>
+                    <section class="clear"></section>
+                </a>
+                <section class="clear"></section>
+            </section>
+        </section>
+    </section>
+</section>
+
+<!--Javascript for the Modal Login Form-->
 <script>
     // Get the modal
     var modal = document.getElementById('id01');
+    var modal = document.getElementById('id02');
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {

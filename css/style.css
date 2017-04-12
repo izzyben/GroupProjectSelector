@@ -538,13 +538,13 @@ input[type="password"] {
      display: block;
  }
 
- .social-login a.twitter1{
-     background: #1DAEE3;
+ .social-login a.yahoo1{
+     background: purple;
      float: left;
  }
 
- i.twitter2 {
-     background: url(../images/twitter.png)no-repeat 10px 9px #1CA4D6;
+ i.yahoo2 {
+     background: url(../images/twitter.png)no-repeat 10px 9px purple;
      width: 26px;
      height: 19px;
      display: inline-block;

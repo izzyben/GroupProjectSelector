@@ -37,6 +37,10 @@ a {
     text-decoration: none;
 }
 
+.lab b {
+    text-align: center;
+}
+
 .clear {
     clear: both;
 }

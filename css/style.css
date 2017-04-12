@@ -69,11 +69,11 @@ hr.hr-text{
     text-transform: uppercase;
     letter-spacing: 2.3px;
     display: inline-block;
-    position: inherit;
+    position: relative;
     top: -12px;
     padding: 0 .5em;
     background: #fff;
-    text-align: center;
+    text-align: right;
     margin: 0;
     color: #222;
 }

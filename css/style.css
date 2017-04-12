@@ -38,8 +38,48 @@ a {
 }
 
 .clear {
+    height: 1px;
     clear: both;
+    width: 100%;
 }
+
+hr {
+    display: block;
+    -webkit-margin-before: 0.5em;
+    -webkit-margin-after: 0.5em;
+    -webkit-margin-start: auto;
+    -webkit-margin-end: auto;
+}
+
+hr.hr-text{
+    padding: 0;
+    border: none;
+    border-top: 1px solid #eee;
+    text-align: center;
+    margin: 30px auto 0 auto;
+}
+
+.hr-text.or{
+    font-family: "futura-pt-n7","futura-pt",Tahoma,Geneva,Verdana,Arial,sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 2.3px;
+}
+
+section.form-container-section p.subtitle{
+    font-family: "futura-pt-n7","futura-pt",Tahoma,Geneva,Verdana,Arial,sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2.3px;
+}
+
 
 #navmenu {
     text-align: right;

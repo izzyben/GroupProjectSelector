@@ -33,7 +33,13 @@ hr {
     margin: 20px 0;
 }
 */
+a {
+    text-decoration: none;
+}
 
+.clear {
+    clear: both;
+}
 
 #navmenu {
     text-align: right;
@@ -392,4 +398,77 @@ hr {
     margin-top: 16px;
     margin-bottom: -5px;
     border-style: none;
+ }
+
+ .social-login{
+     padding: 20px 0px 42px 0px;
+     border-bottom: 1px solid #ccc;
+     margin: 0;
+     border: 0;
+     font-size: 100%;
+     font: inherit;
+     vertical-align: baseline;
+     display: block;
+     text-align: center;
+ }
+
+ .social-login a{
+     font-weight: 600;
+     color: #fff;
+     margin: 0px 1.5% 0px 0px;
+     border-radius: 4px;
+     width: 32.33%;
+     padding: 0px 0;
+     font-size: 13px;
+ }
+
+ .social-login a span {
+     margin-top: 10px;
+     display: block;
+ }
+
+ .social-login a.twitter1{
+     background: #1DAEE3;
+     float: left;
+ }
+
+ i.twitter2 {
+     background: url(../images/twitter.png)no-repeat 10px 9px #1CA4D6;
+     width: 26px;
+     height: 19px;
+     display: inline-block;
+     padding: 10px 6px;
+     float: left;
+     border-radius: 4px 0px 0px 4px;
+ }
+
+ .social-login a.facebook1 {
+     background: #3B5998;
+     float: left;
+ }
+
+ i.facebook2 {
+     float: left;
+     background: url(../images/facebook.png)no-repeat 6px 9px #37528C;
+     width: 26px;
+     height: 19px;
+     display: inline-block;
+     padding: 10px 6px;
+     border-radius: 4px 0px 0px 4px;
+ }
+
+ .social-login a.google1 {
+     background: #D34836;
+     margin: 0;
+     float: left;
+ }
+
+ i.google2 {
+     background: url(../images/google.png)no-repeat 9px 9px #C74534;
+     width: 26px;
+     height: 19px;
+     display: inline-block;
+     padding: 10px 6px;
+     float: left;
+     border-radius: 4px 0px 0px 4px;
  }

@@ -288,6 +288,7 @@ a {
     font-weight: 400;
     color: #c0c0c0;
     border: 1px solid #2DC2BC;
+    border-radius: 5px;
 }
 
 .check{

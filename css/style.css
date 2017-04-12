@@ -278,6 +278,7 @@ a {
 
 .form-container-section input.key {
     background: url(../images/key.png)no-repeat 15px 7px #fff;
+    background-position: 98%;
     display: block;
 }
 

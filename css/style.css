@@ -291,6 +291,15 @@ a {
     border-radius: 5px;
 }
 
+.form-container-section input[type="password"] {
+    outline: none;
+    font-size: 19px;
+    font-weight: 400;
+    border: 1px solid #2DC2BC;
+    border-radius: 5px;
+    color: #c0c0c0;
+}
+
 .check{
     width: 24px;
     height: 24px;

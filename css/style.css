@@ -270,6 +270,16 @@ a {
     text-align: start;
 }
 
+.form-input.user {
+    background: url(../images/user.png)no-repeat 15px 7px #fff;
+    display: block;
+}
+
+.form-input.key {
+    background: url(../images/key.png)no-repeat 15px 7px #fff;
+    display: block;
+}
+
 .check{
     width: 24px;
     height: 24px;

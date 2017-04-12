@@ -272,6 +272,7 @@ a {
 
 .form-container-section input.user {
     background: url(../images/user.png)no-repeat 15px 7px #fff;
+    align-content: flex-end;
     display: block;
 }
 

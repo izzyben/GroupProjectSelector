@@ -69,7 +69,7 @@ hr.hr-text{
     text-transform: uppercase;
     letter-spacing: 2.3px;
     display: inline-block;
-    position: relative;
+    position: inherit;
     top: -12px;
     padding: 0 .5em;
     background: #fff;

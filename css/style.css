@@ -74,6 +74,8 @@ hr.hr-text{
     padding: 0 .5em;
     background: #fff;
     text-align: center;
+    margin: 0;
+    color: #222;
 }
 
 section.form-container-section p.subtitle{

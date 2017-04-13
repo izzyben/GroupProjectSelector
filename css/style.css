@@ -65,8 +65,8 @@ hr.hr-text{
 .hr-text.or{
     font-family: "futura-pt-n7","futura-pt",Tahoma,Geneva,Verdana,Arial,sans-serif;
     font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
+    font-weight: 500;
+    font-size: 15px;
     line-height: 1.2;
     text-transform: uppercase;
     letter-spacing: 2.3px;
@@ -83,8 +83,8 @@ hr.hr-text{
 section.form-container-section p.subtitle{
     font-family: "futura-pt-n7","futura-pt",Tahoma,Geneva,Verdana,Arial,sans-serif;
     font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
+    font-weight: 500;
+    font-size: 15px;
     line-height: 1.2;
     text-transform: uppercase;
     text-align: center;

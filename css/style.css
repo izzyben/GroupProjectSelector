@@ -662,7 +662,7 @@ button.regcancelbtn {
     background-color: #f44336;
 }
 
-#reg-loginbtn {
+.reg-loginbtn {
     float: left;
     padding: 8px 16px;
     box-sizing: border-box;
@@ -672,7 +672,7 @@ button.regcancelbtn {
     margin-left: 5px;
 }
 
-#reg-loginbtn:hover, #reg-loginbtn:focus{
+.reg-loginbtn:hover, .reg-loginbtn:focus{
     opacity: 0.7;
     background-color: black;
     cursor: pointer;

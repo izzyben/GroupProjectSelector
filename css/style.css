@@ -662,6 +662,15 @@ button.regcancelbtn {
     background-color: #f44336;
 }
 
+#reg-loginbtn {
+    float: left;
+    padding: 8px 16px;
+    box-sizing: border-box;
+    background-color: darkseagreen;
+    color: #FFFFFF;
+    margin-top: 5px;
+}
+
 /* Float cancel and signup buttons and add an equal width */
 button.regcancelbtn,button.regsignupbtn {
     float: left;

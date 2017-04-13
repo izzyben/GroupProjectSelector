@@ -668,7 +668,8 @@ button.regcancelbtn {
     box-sizing: border-box;
     background-color: darkseagreen;
     color: #FFFFFF;
-    margin-top: 5px;
+    margin-top: 7px;
+    margin-left: 5px;
 }
 
 /* Float cancel and signup buttons and add an equal width */

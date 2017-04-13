@@ -591,10 +591,10 @@ input[type="password"] {
 .fa {
     padding: 20px;
     font-size: 30px;
-    width: 30px;
+    width: 100px;
     text-align: center;
     text-decoration: none;
-    border-radius: 50%;
+    border-radius: 5px;
     height: inherit;
 }
 
@@ -603,6 +603,9 @@ input[type="password"] {
     opacity: 0.7;
 }
 
+::after{
+    margin-bottom: 5px;
+}
 
 /* Facebook */
 .fa-facebook {

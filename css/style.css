@@ -608,19 +608,19 @@ input[type="password"] {
 }
 
 /* Facebook */
-.fa-facebook::before {
+.fa-facebook {
     background: #3B5998;
     color: white;
 }
 
 /* Twitter */
-.fa-yahoo::after {
+.fa-yahoo {
     background: #720E9E;
     color: white;
 }
 
 /* Google */
-.fa-google::after {
+.fa-google {
     background: #f44336;
     color: white;
 }

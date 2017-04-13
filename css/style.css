@@ -614,3 +614,9 @@ input[type="password"] {
     background: #55ACEE;
     color: white;
 }
+
+/* Google */
+.fa-google {
+    background: #f44336;
+    color: white;
+}

@@ -591,10 +591,11 @@ input[type="password"] {
 .fa {
     padding: 20px;
     font-size: 30px;
-    width: inherit;
+    width: 100px;
     text-align: center;
     text-decoration: none;
     border-radius: 5px;
+    height: inherit;
 }
 
 /* Add a hover effect if you want */

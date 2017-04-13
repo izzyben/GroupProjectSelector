@@ -670,7 +670,7 @@ button.regcancelbtn {
     color: #FFFFFF;
     margin-top: 7px;
     margin-left: 5px;
-    cursor: pointer;
+    cursor: auto;
 }
 
 #reg-loginbtn:hover{

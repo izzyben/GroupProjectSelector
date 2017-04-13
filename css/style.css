@@ -617,6 +617,7 @@ input[type="password"] {
 .fa-yahoo {
     background: #720E9E;
     color: white;
+    align-content: center;
 }
 
 /* Google */

@@ -603,7 +603,7 @@ input[type="password"] {
     opacity: 0.7;
 }
 
-::before{
+::after{
     margin-bottom: 5px;
 }
 
@@ -614,13 +614,13 @@ input[type="password"] {
 }
 
 /* Twitter */
-.fa-yahoo::before {
+.fa-yahoo::after {
     background: #720E9E;
     color: white;
 }
 
 /* Google */
-.fa-google::before {
+.fa-google::after {
     background: #f44336;
     color: white;
 }

@@ -629,60 +629,9 @@ input[type="password"] {
     letter-spacing: .4px;
 }
 
-.field{
-    padding-left: 0;
-    width: 63%;
-    padding: 0 18.5%;
-    margin: 0 auto 19px;
-    text-align: left;
-    position: relative;
-    float: left;
-}
 
-.email-label .firstname-label .lastname-label .password-label .gender-label .optional .terms{
-    font-family: "futura-pt-n7","futura-pt",Tahoma,Geneva,Verdana,Arial,sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 14px;
-    line-height: 1.7;
-    color: #999;
-    letter-spacing: 2px;
-    width: 100%;
-    margin: 0 3% 11px 0;
-    min-width: 20%;
-    float: left;
-    clear: both;
-    cursor: default;
-}
 
-.email-label{
-    text-align: left;
-}
 
-.email-hint{
-    font-size: 14px;
-    line-height: 1.7;
-    letter-spacing: .4px;
-    clear: both;
-    padding-top: 6px;
-    color: #999;
-    display: block;
-    text-align: left;
-    font-family: "futura-pt-n4","futura-pt",Tahoma,Geneva,Verdana,Arial,sans-serif;
-    font-style: normal;
-    font-weight: 400;
-}
-.optional{
-    display: none;
-    margin-left: 5px;
-    text-align: left;
-}
 
-.submit{
-    text-align: left;
-    margin: 15px 0 0;
-    padding: 0;
-    display: block;
-    color: #222;
-}
+
+

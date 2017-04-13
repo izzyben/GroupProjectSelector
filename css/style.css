@@ -670,6 +670,12 @@ button.regcancelbtn {
     color: #FFFFFF;
     margin-top: 7px;
     margin-left: 5px;
+    cursor: pointer;
+}
+
+#reg-loginbtn:hover{
+    opacity: 0.7;
+    background-color: black;
 }
 
 /* Float cancel and signup buttons and add an equal width */

@@ -663,7 +663,7 @@ button.regcancelbtn {
 }
 
 /* Float cancel and signup buttons and add an equal width */
-.regcancelbtn,.regsignupbtn {
+button.regcancelbtn,button.regsignupbtn {
     float: left;
     width: 50%;
 }

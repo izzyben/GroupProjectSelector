@@ -14,7 +14,7 @@
 
 </head>
 
-<body>
+<body onload="document.getElementById('id01').style.display='none'">
 
 <!-- Navigation Bar -->
 <nav>
@@ -166,7 +166,7 @@
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
         if (event.target == modal) {
-            modal.style.display = "block";
+            modal.style.display = "none";
         }
     }
 </script>

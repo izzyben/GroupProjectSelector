@@ -243,6 +243,6 @@ div.demo-layout div.demo-drawer div.demo-navigation button.active {
     background-color: #ddd;
 }
 
-#Hme,#Inb,#Msg,#Req,Upd,#Grp {
+#Hme,#Inb,#Msg,#Req,#Upd,#Grp {
     display: none;
 }

@@ -84,15 +84,61 @@
             </div>
         </header>
         <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
-            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>Inbox</a>
-            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i>Send Message</a>
-            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">people</i>Group</a>
+            <a class="mdl-navigation__link" href="" onclick="openMenu(event,'Hme')"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
+            <a class="mdl-navigation__link" href="" onclick="openMenu(event,'Inb')"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>Inbox</a>
+            <a class="mdl-navigation__link" href="" onclick="openMenu(event,'Msg')"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i>Send Message</a>
+            <a class="mdl-navigation__link" href="" onclick="openMenu(event,'Grp')"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">people</i>Group</a>
             <div class="mdl-layout-spacer"></div>
         </nav>
     </div>
+
+    <!--Javascript for Menu Navigation-->
+    <script>
+        function openMenu(evt, menuName) {
+            // Declare all variables
+            var i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the link that opened the tab
+            document.getElementById(menuName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+    </script>
+
+
     <main class="mdl-layout__content mdl-color--grey-100">
         <div class="mdl-grid demo-content">
+            <div id="Hme" class="tabcontent">
+                <h3>Thank God it worked!!!!</h3>
+                <p>God is great</p>
+            </div>
+
+            <div id="Inb" class="tabcontent">
+                <h3>Thank God</h3>
+                <p>God is great forever</p>
+            </div>
+
+            <div id="Msg" class="tabcontent">
+                <h3>Thank God</h3>
+                <p>Message Tab</p>
+            </div>
+
+            <div id="Grp" class="tabcontent">
+                <h3>Thank God</h3>
+                <p>Group Tab</p>
+            </div>
             <!--<div class="demo-charts mdl-color&#45;&#45;white mdl-shadow&#45;&#45;2dp mdl-cell mdl-cell&#45;&#45;12-col mdl-grid">-->
             <!--<svg fill="currentColor" width="200px" height="200px" viewBox="0 0 1 1" class="demo-chart mdl-cell mdl-cell&#45;&#45;4-col mdl-cell&#45;&#45;3-col-desktop">-->
             <!--<use xlink:href="#piechart" mask="url(#piemask)"/>-->

@@ -84,7 +84,7 @@
                 </ul>
             </div>
         </header>
-        <div class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
+        <div class="demo-navigation mdl-navigation mdl-color--blue-grey-800" onload="homeActive()">
             <button class="mdl-navigation__link tablinks" href=""  onclick="openMenu(event,'Home'); document.getElementById('Inbox').style.display='none'"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</button>
             <button class="mdl-navigation__link tablinks" href=""  onclick="openMenu(event,'Inbox'); document.getElementById('Home').style.display='none'"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>Inbox</button>
             <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i>Send Message</a>
@@ -114,6 +114,11 @@
 
                 // Show the current tab, and add an "active" class to the link that opened the tab
                 document.getElementById(menuName).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
+
+            function homeActive(evt,menuName) {
+                document.getElementById('Home').style.display = "block";
                 evt.currentTarget.className += " active";
             }
         </script>

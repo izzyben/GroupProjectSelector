@@ -179,8 +179,7 @@ _:-ms-input-placeholder, :root .demo-graph {
     font-weight: 400;
 }
 .demo-cards ul {
-    padding: 0;
-}
+    padding: 0;  }
 .demo-cards h3 {
     font-size: 1em;
 }
@@ -232,7 +231,7 @@ _:-ms-input-placeholder, :root .demo-graph {
     margin-left: 30px;
     width: 100%;
     border-left: none;
-    height: 100%;
+    height: 50%;
 }
 
 /* Create an active/current "tab button" class */

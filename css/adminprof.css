@@ -243,6 +243,6 @@ div.demo-layout div.demo-drawer div.demo-navigation button.active {
     background-color: #ddd;
 }
 
-#Inbox,#Home {
+#Hme,#Inb,#Msg,#Req,Upd,#Grp {
     display: none;
 }

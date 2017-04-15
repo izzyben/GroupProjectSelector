@@ -14,7 +14,7 @@ $sql = "SELECT user_id FROM users WHERE (username='$username' OR email='$usernam
 $type = "SELECT user_id FROM users WHERE (user_type='standard');";
 $result1 = mysqli_query($db,$sql);
 $result2 = mysqli_query($db,$type);
-if( mysqli_num_rows($result) == 1)
+if( mysqli_num_rows($result1) == 1)
  {
      if ($result1 == $result2) {
          header("location: studentprofile.html"); // Redirecting To Student Profile Page

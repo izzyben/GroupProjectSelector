@@ -97,7 +97,7 @@ html, body {
 }
 .demo-layout .demo-navigation .mdl-navigation__link:hover {
     background-color: #00BCD4;
-    tcolor: #37474F;
+    color: #37474F;
 }
 .demo-navigation .mdl-navigation__link .material-icons {
     font-size: 24px;
@@ -240,7 +240,7 @@ div.demo-layout div.demo-drawer div.demo-navigation button.active {
 
 /* Change background color of buttons on hover */
 .demo-layout .demo-navigation .demo-navigation button {
-    background-color: #ddd;
+    background-color: #;
 }
 
 #Hme,#Inb,#Msg,#Req,#Upd,#Grp {

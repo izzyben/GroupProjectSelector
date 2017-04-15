@@ -242,5 +242,5 @@ div.demo-layout div.demo-drawer div.demo-navigation button.active {
 
 /* Change background color of buttons on hover */
 div.demo-layout div.demo-navigation div.demo-navigation button:hover {
-    background-color: inherit;
+    background-color: #37474F;
 }

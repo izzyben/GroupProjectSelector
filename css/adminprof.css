@@ -233,3 +233,13 @@ _:-ms-input-placeholder, :root .demo-graph {
     border-left: none;
     height: 300px;
 }
+
+/* Create an active/current "tab button" class */
+div.demo-navigation a.active {
+    background-color: #ccc;
+}
+
+/* Change background color of buttons on hover */
+div.demo-navigation a:hover {
+    background-color: #ddd;
+}

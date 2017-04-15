@@ -230,7 +230,7 @@ _:-ms-input-placeholder, :root .demo-graph {
     padding: 0px 12px;
     border: 1px solid #ccc;
     margin-left: 5px;
-    width: inherit;
+    width: 70%;
     border-left: none;
     height: 300px;
 }

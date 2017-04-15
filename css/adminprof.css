@@ -223,3 +223,13 @@ _:-ms-input-placeholder, :root .demo-graph {
     -ms-flex-align: center;
     align-items: center;
 }
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 70%;
+    border-left: none;
+    height: 300px;
+}

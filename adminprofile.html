@@ -120,7 +120,10 @@
 
 
     </div>
-    <main class="mdl-layout__content mdl-color--grey-100" onload="document.getElementsByClassName('mdl-grid').style.display='none'">
+    <main class="mdl-layout__content mdl-color--grey-100" onload="function hideDIV() {
+      var x=document.getElementsByClassName('mdl-grid');
+      x.hide();
+    }">
         <div class="mdl-grid demo-content">
             <div id="Home" class="tabcontent">
                 <h3>Thank God it worked!!!!</h3>

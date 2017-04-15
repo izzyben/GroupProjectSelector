@@ -84,7 +84,7 @@
                 </ul>
             </div>
         </header>
-        <div class="demo-navigation mdl-navigation mdl-color--blue-grey-800" onload="homeActive()">
+        <div class="demo-navigation mdl-navigation mdl-color--blue-grey-800" onload="homeActive(event,'Home')">
             <button class="mdl-navigation__link tablinks" href=""  onclick="openMenu(event,'Home'); document.getElementById('Inbox').style.display='none'"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</button>
             <button class="mdl-navigation__link tablinks" href=""  onclick="openMenu(event,'Inbox'); document.getElementById('Home').style.display='none'"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>Inbox</button>
             <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i>Send Message</a>
@@ -117,8 +117,8 @@
                 evt.currentTarget.className += " active";
             }
 
-            function homeActive(evt,menuName) {
-                document.getElementById('Home').style.display = "block";
+            function homeActive(evt,menuname) {
+                document.getElementById(menuname).style.display = "block";
                 evt.currentTarget.className += " active";
             }
         </script>

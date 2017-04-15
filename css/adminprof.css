@@ -230,7 +230,7 @@ _:-ms-input-placeholder, :root .demo-graph {
     border: 1px solid #ccc;
     width: 100%;
     border-left: none;
-    height: 50%;
+    height: 100%;
 }
 
 /* Create an active/current "tab button" class */

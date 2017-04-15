@@ -244,3 +244,7 @@ div.demo-layout div.demo-drawer div.demo-navigation button.active {
 .demo-layout .demo-navigation .demo-navigation button {
     background-color: #ddd;
 }
+
+#Inbox {
+    display: none;
+}

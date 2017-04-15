@@ -237,7 +237,7 @@ _:-ms-input-placeholder, :root .demo-graph {
 
 /* Create an active/current "tab button" class */
 div.demo-layout div.demo-drawer div.demo-navigation button.active {
-    background-color: #ccc;
+    background-color: inherit;
 }
 
 /* Change background color of buttons on hover */

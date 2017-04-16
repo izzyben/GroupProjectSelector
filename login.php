@@ -10,18 +10,15 @@ if(empty($_POST[ "username"]) || empty($_POST[ "password"]))
      $username=$_POST['username'];
      $password=$_POST['password'];
 
-$sql = "SELECT user_id FROM users WHERE (username='$username' OR email='$username') and password='$password'; ";
-$type = "SELECT user_id FROM users WHERE (user_type='standard');";
-$result1 = mysqli_query($db,$sql);
-$result2 = mysqli_query($db,$type);
-if( mysqli_num_rows($result1) == 1)
+$sql = "SELECT user_id FROM users WHERE (username='$username' OR email='$username') and password='".md5($password)."'";
+$result = mysqli_query($db,$sql);
+
+if( mysqli_num_rows($result) == 1)
  {
-     if ($result1 == $result2) {
-         header("location: studentprofile.html"); // Redirecting To Student Profile Page
-     }
-     else{
-         header("location: adminprofile.html"); // Redirecting To Administrator Profile Page
-     }
+     $_SESSION['username'] = $username;
+
+     header("location: studentprofile.html"); // Redirecting To Student Profile Page
+
  }
  else
  {

@@ -10,7 +10,7 @@ if(empty($_POST[ "username"]) || empty($_POST[ "password"]))
      $username=$_POST['username'];
      $password=$_POST['password'];
 
-$sql = "SELECT user_id FROM users WHERE (username='$username' OR email='$username') and password='".md5($password)."'";
+$sql = "SELECT user_id FROM users WHERE (username='$username' OR email='$username') and password='($password)';";
 $result = mysqli_query($db,$sql);
 
 if( mysqli_num_rows($result) == 1)

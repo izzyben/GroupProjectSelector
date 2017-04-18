@@ -32,14 +32,22 @@ if ( mysqli_num_rows($u_result) == 1){
     echo "</script>";
 }
 
-if ( mysqli_num_rows($e_result) == 1) {
+elseif ( mysqli_num_rows($e_result) == 1) {
     echo "<script language=\"JavaScript\">\n";
     echo "alert('Email is Already Registered');\n";
     echo "window.location='index.html'";
     echo "</script>";
 }
 
-if ($password != $r_password) {
+elseif ($password != $r_password) {
     echo("Error... Passwords do not match");
     exit;
+}
+
+else{
+    echo "<script language=\"JavaScript\">\n";
+    echo "alert('Registration Successful!!');\n";
+    echo "alert('You can Login When the Page is Refreshed');\n";
+    echo "window.location='index.html'";
+    echo "</script>";
 }

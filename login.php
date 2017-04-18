@@ -17,10 +17,10 @@ if( mysqli_num_rows($result) == 1)
  {
      //$_SESSION['username'] = $username;
      //if ($username == 'admin'){
-         header("location: adminprofile.html");
+         //header("location: adminprofile.html");
  //}
      //else{
-      //   header("location: studentprofile.html"); // Redirecting To Student Profile Page
+       header("location: studentprofile.html"); // Redirecting To Student Profile Page
     // }
  }
  else

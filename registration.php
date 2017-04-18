@@ -47,7 +47,7 @@ elseif ($password != $r_password) {
 else{
     echo "<script language=\"JavaScript\">\n";
     echo "alert('Registration Successful!!');\n";
-    echo "alert('You can Login When the Page is Refreshed');\n";
+    echo "alert('You can Login When the Page is Refreshed');";
     echo "window.location='index.html'";
     echo "</script>";
 }

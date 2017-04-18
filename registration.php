@@ -19,20 +19,20 @@ $password = stripslashes($password);
 $email = stripslashes($email);
 $r_password = stripslashes($r_password);
 
-$u_sql = "SELECT username FROM users WHERE username='$username;";
-$e_sql = "SELECT email FROM users WHERE email='$email';";
+$u_sql = "SELECT username FROM users WHERE username=$username;";
+$e_sql = "SELECT email FROM users WHERE email=$email;";
 
 $u_result = mysqli_query($db,$u_sql);
 $e_result = mysqli_query($db,$e_sql);
 
-if ( mysqli_num_rows($u_result) == 1){
+if ( mysqli_num_rows($u_result) != 0){
     echo "<script language=\"JavaScript\">\n";
     echo "alert('Username is Taken. Please Choose another Username');\n";
     echo "window.location='index.html'";
     echo "</script>";
 }
 
-elseif ( mysqli_num_rows($e_result) == 1) {
+elseif ( mysqli_num_rows($e_result) != 1) {
     echo "<script language=\"JavaScript\">\n";
     echo "alert('Email is Already Registered');\n";
     echo "window.location='index.html'";
@@ -51,3 +51,5 @@ else{
     echo "window.location='index.html'";
     echo "</script>";
 }
+
+

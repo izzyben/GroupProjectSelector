@@ -16,9 +16,12 @@ $result = mysqli_query($db,$sql);
 if( mysqli_num_rows($result) == 1)
  {
      $_SESSION['username'] = $username;
-
-     header("location: studentprofile.html"); // Redirecting To Student Profile Page
-
+     if ($username == 'admin'){
+         header("location: adminprofile.html");
+ }
+     else{
+         header("location: studentprofile.html"); // Redirecting To Student Profile Page
+     }
  }
  else
  {

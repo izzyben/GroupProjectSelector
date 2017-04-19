@@ -8,6 +8,8 @@
 
 include("dbconnect.php"); // Establishing connection with our database
 
+echo htmlspecialchars($_SERVER['PHP_SELF']);
+
 //$username= $_POST['usn'];
 //$password= $_POST['psw'];
 //$email= $_POST['usn'];
@@ -71,9 +73,6 @@ function test_input($data) {
     return $data;
 }
 
-function password_match($password) {
-    $password = test_input($_POST["psw"]);
-}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["usn"])) {
@@ -149,4 +148,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $r_passwordErr = "Passwords do not match";
         }
     }
+}
+
+else{
+    echo "REGISTRATION SUCCESSFUL!! Redirecting to Home Page for Login....";
+    header("location: index.html"); // Redirecting to Home Page
 }

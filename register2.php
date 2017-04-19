@@ -14,7 +14,7 @@ if (isset($_POST['signup1']))
 
     $result = mysqli_query($db, $sql);
     if ($result) {
-        echo "Success!! Login";
+        echo "<script language='JavaScript'> alert('Registration Succesful'); </script>";
         header("location: index.html"); // Redirecting to Home Page
     }
     else {

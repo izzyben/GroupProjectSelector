@@ -11,7 +11,7 @@ if (isset($_POST['signup1']))
     $last_name = $_POST['last'];
 
 
-    $user_check = $link->query("SELECT * FROM users WHERE username = '" . $username . "' OR email = '" . $email . "'");
+    $user_check = $db->query("SELECT * FROM users WHERE username = '" . $username . "' OR email = '" . $email . "'");
 
     if ($user_check->num_rows == 1) {
 

@@ -129,16 +129,16 @@
             <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>"> <!--htmlspecialchars() function prevents Cross-site Scripting attacks in forms--><!--$_SERVER["PHP_SELF"] sends the submitted form data to the page itself-->
                 <section class="regcontainer">
                     <label><b>First Name</b></label>
-                    <input class="user" type="text" value="<?php echo $first;?>"  placeholder='Enter Firstname' onfocus="this.value = ''" name="first" required/><span class="error">* <?php echo $f-nameErr;?></span><br><br>
+                    <input class="user" type="text"  placeholder='Enter Firstname' onfocus="this.value = ''" name="first" required/><span class="error">* <?php echo $f-nameErr;?></span><br><br>
 
                     <label><b>Last Name</b></label>
-                    <input class="user" type="text" value="<?php echo $last;?>"  placeholder='Enter Lastname' onfocus="this.value = ''" name="last" required/><span class="error">* <?php echo $l-nameErr;?></span><br><br>
+                    <input class="user" type="text"  placeholder='Enter Lastname' onfocus="this.value = ''" name="last" required/><span class="error">* <?php echo $l-nameErr;?></span><br><br>
 
                     <label><b>Username</b></label>
-                    <input class="user" type="text" value="<?php echo $usn;?>"  placeholder='Create Username' onfocus="this.value = ''" name="usn" required/><span class="error">* <?php echo $usernameErr;?></span><br><br>
+                    <input class="user" type="text"  placeholder='Create Username' onfocus="this.value = ''" name="usn" required/><span class="error">* <?php echo $usernameErr;?></span><br><br>
 
                     <label><b>Email</b></label>
-                    <input type="text" placeholder="Enter Email" value="<?php echo $email;?>" onfocus="this.value = ''" name="email" required/><span class="error">* <?php echo $emailErr;?></span><br><br>
+                    <input type="text" placeholder="Enter Email" onfocus="this.value = ''" name="email" required/><span class="error">* <?php echo $emailErr;?></span><br><br>
 
                     <label><b>Password</b></label>
                     <input type="password" placeholder="Enter Password" onfocus="this.value = ''" name="psw" required/><span class="error">* <?php echo $passwordErr;?></span><br><br>

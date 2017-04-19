@@ -22,7 +22,7 @@ $result = mysqli_query($db,$sql);
          header("location: adminprofile.html");
  }
      else{
-       header("location: studentprofile.html"); // Redirecting To Student Profile Page
+       header("location: studentprofile.php"); // Redirecting To Student Profile Page
      }
         }
  else

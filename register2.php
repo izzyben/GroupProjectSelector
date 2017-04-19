@@ -14,11 +14,16 @@ if (isset($_POST['signup1']))
 
     $result = mysqli_query($db, $sql);
     if ($result) {
-        echo "<script language='JavaScript'> alert('Registration Succesful'); </script>";
+        echo "<script language=\"JavaScript\">\n";
+        echo "alert('Registration Successful!');\n";
+        echo "window.location='index.html'";
+        echo "</script>";
         header("location: index.html"); // Redirecting to Home Page
     }
     else {
-        echo "<script language='JavaScript'> alert('Error in registering'); </script>";
-        echo "<script type='text/javascript'> window.location='index.html'</script>";
+        echo "<script language=\"JavaScript\">\n";
+        echo "alert('Username or Password was incorrect!');\n";
+        echo "window.location='index.html'";
+        echo "</script>";
     }
 }

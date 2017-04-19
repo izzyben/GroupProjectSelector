@@ -64,7 +64,7 @@
         <header class="demo-drawer-header">
             <img src="images/user.jpg" class="demo-avatar">
             <div class="demo-avatar-dropdown">
-                <span><?php echo $_POST["username"];?> <p>Student</p></span>
+                <span><label><?php echo $_POST["username"];?></label><p>Student</p></span>
                 <div class="mdl-layout-spacer"></div>
                 <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                     <i class="material-icons" role="presentation">arrow_drop_down</i>

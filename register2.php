@@ -13,9 +13,10 @@ if (isset($_POST['signup1']))
 
     $user_check = $db->query("SELECT * FROM users WHERE username = '" . $username . "' OR email = '" . $email . "'");
 
-    if ($user_check->num_rows == 1) {
+    if ($user_check->num_rows != 0) {
 
         echo "<script language='JavaScript'> alert('User ALready Exists'); </script>";
+        echo "window.location='index.html'";
     }
     else {
 

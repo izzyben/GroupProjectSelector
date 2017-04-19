@@ -18,7 +18,7 @@ if (isset($_POST['signup1']))
         header("location: index.html"); // Redirecting to Home Page
     }
     else {
-        echo "Error!";
+        echo "<script language='JavaScript'> alert('Error in registering'); </script>";
         header("location: index.html");
     }
 }

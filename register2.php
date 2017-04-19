@@ -19,6 +19,6 @@ if (isset($_POST['signup1']))
     }
     else {
         echo "<script language='JavaScript'> alert('Error in registering'); </script>";
-        echo "<script> window.location.reload()</script>";
+        echo "<script type='text/javascript'> window.location='index.php'</script>";
     }
 }

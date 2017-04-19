@@ -71,6 +71,10 @@ function test_input($data) {
     return $data;
 }
 
+function password_match($password) {
+    $password = test_input($_POST["psw"]);
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["usn"])) {
         $usernameErr = "Name is required";
@@ -79,6 +83,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // check if name only contains letters and whitespace
         if (!preg_match("/^[a-zA-Z ]*$/",$username)) {
             $usernameErr = "Only letters and white space allowed";
+        }
+        else {
+            $username = $_POST["usn"];
+            $sql = "INSERT INTO users ('username') VALUE ('$username');";
         }
     }
 
@@ -89,6 +97,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // check if e-mail address is well-formed
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $emailErr = "Invalid email format";
+        }
+        else{
+            $email = $_POST["email"];
+            $sql = "INSERT INTO users ('email') VALUE ('$email');";
         }
     }
 
@@ -106,6 +118,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (!preg_match("/^[a-zA-Z ]*$/",$first_name)) {
             $first_nameErr = "Only letters and white space allowed";
         }
+        else{
+            $first_name = $_POST["first"];
+            $sql = "INSERT INTO users ('Firstname') VALUE ('$first_name');";
+        }
     }
 
     if (empty($_POST["l-name"])) {
@@ -116,11 +132,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (!preg_match("/^[a-zA-Z ]*$/",$last_name)) {
             $last_nameErr = "Only letters and white space allowed";
         }
+        else{
+            $last_name = $_POST["last"];
+            $sql = "INSERT INTO users ('Lastname') VALUE ('$last_name');";
+        }
     }
 
     if (empty($_POST["psw-repeat"])) {
         $r_passwordErr = "Please Confirm Your Password";
     } else {
         $r_password = test_input($_POST["psw-repeat"]);
+        //check if passwords match
+        $password1 = $_POST["psw"];
+        $password2 = $_POST["psw-repeat"];
+        if ($password1 != $password2){
+            $r_passwordErr = "Passwords do not match";
+        }
     }
 }

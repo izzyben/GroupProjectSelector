@@ -4,7 +4,46 @@
 require("dbconnect.php"); // Establishing connection with our database
 
 
-//$username= $_POST['usn'];
+if (isset($_POST['signup1'])) {
+//    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    $username = $_POST["usn"];
+    $email = $_POST["email"];
+    $password = $_POST["psw"];
+    $r_password = $_POST["psw-repeat"];
+    $first_name = $_POST["f-name"];
+    $last_name = $_POST["l-name"];
+
+   /* $username = test_input($_POST["usn"]);
+    $email = test_input($_POST["email"]);
+    $password = test_input($_POST["psw"]);
+    $r_password = test_input($_POST["psw-repeat"]);
+    $first_name = test_input($_POST["f-name"]);
+    $last_name = test_input($_POST["l-name"]);*/
+
+    $check_query = $link->query("SELECT * FROM users WHERE username = '" . $username . "' OR email = '" . $username . "'");
+
+    if ($check_query->num_rows == 1) {
+
+        echo "User ALready Exists";
+    }
+    else {
+        $sql = "INSERT INTO users ('Firstname','Lastname','username','password','email') VALUES ('$first_name','$last_name','$username','$password','$email');";
+
+        $result = mysqli_query($link, $sql);
+        if ($result) {
+            echo "Success!! Login";
+            header("location: index.html"); // Redirecting to Home Page
+        }
+        else {
+            echo "Error!";
+            echo "<script> window.location.reload()</script>";
+        }
+    }
+}
+
+
+/*//$username= $_POST['usn'];
 //$password= $_POST['psw'];
 //$email= $_POST['usn'];
 //$r_password= $_POST['psw-repeat'];
@@ -52,10 +91,6 @@ $usernameErr = $emailErr = $passwordErr = $r_passwordErr = $last_nameErr = $firs
 $username = $email = $password = $r_password = $last_name = $first_name = "";
 
 
-
-
-
-
 //if ($_SERVER["REQUEST_METHOD"] == "POST") {
 //    $username = test_input($_POST["usn"]);
 //    $email = test_input($_POST["email"]);
@@ -65,56 +100,13 @@ $username = $email = $password = $r_password = $last_name = $first_name = "";
 //    $last_name = test_input($_POST["l-name"]);
 //}
 
-function test_input($data) {
+function test_input($data)
+{
     $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
     return $data;
 }
-
-
-
-
-if (isset($_POST['signup'])) {
-//    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-    $username = $_POST["usn"];
-    $email = $_POST["email"];
-    $password = $_POST["psw"];
-    $r_password = $_POST["psw-repeat"];
-    $first_name = $_POST["f-name"];
-    $last_name = $_POST["l-name"];
-
-    $username = test_input($_POST["usn"]);
-    $email = test_input($_POST["email"]);
-    $password = test_input($_POST["psw"]);
-    $r_password = test_input($_POST["psw-repeat"]);
-    $first_name = test_input($_POST["f-name"]);
-    $last_name = test_input($_POST["l-name"]);
-
-    $check_query = $link->query("SELECT * FROM users WHERE username = '" . $username . "' OR email = '" . $username . "'");
-
-    if ($check_query->num_rows == 1) {
-
-        echo "User ALready Exists";
-    } else {
-        $sql = "INSERT INTO users ('Firstname','Lastname','username','password','email') VALUES ('$first_name','$last_name','$username','$password','$email');";
-
-        $result = mysqli_query($link, $sql);
-        if ($result) {
-            echo "Success!! Login";
-            header("location: index.html"); // Redirecting to Home Page
-        } else {
-            echo "Error!";
-            echo "<script> window.location.reload()</script>";
-        }
-    }
-}
-
-
-
-
-
 
 
 //    if (empty($_POST["usn"])) {
@@ -191,5 +183,5 @@ if (isset($_POST['signup'])) {
 ////            $sql = "INSERT INTO users ('Firstname','Lastname','username','password','email') VALUES ('$first_name','$last_name','$username','$password','$email');";
 ////            echo "REGISTRATION SUCCESSFUL!! Redirecting to Home Page for Login....";
 ////            header("location: index.html"); // Redirecting to Home Page
-////        }
+////        }*/
 ?>

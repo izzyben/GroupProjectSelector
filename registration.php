@@ -36,7 +36,9 @@ if (isset($_POST['signup'])) {
 
         if ($user_check->num_rows == 1) {
 
-            echo "<script language='JavaScript'> alert('User ALready Exists'); </script>";
+            echo "<script language='JavaScript'> alert('Username/Email Address has been Registered!! Login or Register with another Username/Email'); </script>";
+            header("location: index.html"); // Redirecting to Home Page
+
         } else {
             $sql = "INSERT INTO users ('Firstname','Lastname','username','password','email') VALUES ('$first_name','$last_name','$username','$password','$email');";
 

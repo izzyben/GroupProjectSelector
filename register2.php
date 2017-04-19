@@ -15,7 +15,7 @@ if (isset($_POST['signup1']))
 
     if ($user_check->num_rows != 0) {
 
-        echo "<script language='JavaScript'> alert('User ALready Exists'); </script>";
+        echo "<script language='JavaScript'> alert('Username/Email Address has been Registered!! Login or Register with another Username/Email'); </script>";
         echo "window.location='index.html'";
     }
     else {

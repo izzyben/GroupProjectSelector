@@ -8,7 +8,6 @@
 
 require("dbconnect.php"); // Establishing connection with our database
 
-//echo htmlspecialchars($_SERVER['PHP_SELF']);
 
 //$username= $_POST['usn'];
 //$password= $_POST['psw'];
@@ -58,23 +57,18 @@ $usernameErr = $emailErr = $passwordErr = $r_passwordErr = $last_nameErr = $firs
 $username = $email = $password = $r_password = $last_name = $first_name = "";
 
 
-$username = $_POST["usn"];
-$email = $_POST["email"];
-$password = $_POST["psw"];
-$r_password = $_POST["psw-repeat"];
-$first_name = $_POST["f-name"];
-$last_name = $_POST["l-name"];
 
 
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = test_input($_POST["usn"]);
-    $email = test_input($_POST["email"]);
-    $password = test_input($_POST["psw"]);
-    $r_password = test_input($_POST["psw-repeat"]);
-    $first_name = test_input($_POST["f-name"]);
-    $last_name = test_input($_POST["l-name"]);
-}
+
+//if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//    $username = test_input($_POST["usn"]);
+//    $email = test_input($_POST["email"]);
+//    $password = test_input($_POST["psw"]);
+//    $r_password = test_input($_POST["psw-repeat"]);
+//    $first_name = test_input($_POST["f-name"]);
+//    $last_name = test_input($_POST["l-name"]);
+//}
 
 function test_input($data) {
     $data = trim($data);
@@ -87,81 +81,119 @@ function test_input($data) {
 
 
 if (isset($_POST['signup'])) {
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        if (empty($_POST["usn"])) {
-            $usernameErr = "Name is required";
-        } else {
-            $username = test_input($_POST["usn"]);
-            // check if name only contains letters and whitespace
-            if (!preg_match("/^[a-zA-Z ]*$/", $username)) {
-                $usernameErr = "Only letters and white space allowed";
-            } else {
-                $username = $_POST["usn"];
-                $sql = "INSERT INTO users ('username') VALUE ('$username');";
-            }
-        }
+//    if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-        if (empty($_POST["email"])) {
-            $emailErr = "Email is required";
-        } else {
-            $email = test_input($_POST["email"]);
-            // check if e-mail address is well-formed
-            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                $emailErr = "Invalid email format";
-            } else {
-                $email = $_POST["email"];
-                $sql = "INSERT INTO users ('email') VALUE ('$email');";
-            }
-        }
+    $username = $_POST["usn"];
+    $email = $_POST["email"];
+    $password = $_POST["psw"];
+    $r_password = $_POST["psw-repeat"];
+    $first_name = $_POST["f-name"];
+    $last_name = $_POST["l-name"];
 
-        if (empty($_POST["psw"])) {
-            $passwordErr = "Password is Required";
-        } else {
-            $password = test_input($_POST["psw"]);
-        }
+    $username = test_input($_POST["usn"]);
+    $email = test_input($_POST["email"]);
+    $password = test_input($_POST["psw"]);
+    $r_password = test_input($_POST["psw-repeat"]);
+    $first_name = test_input($_POST["f-name"]);
+    $last_name = test_input($_POST["l-name"]);
 
-        if (empty($_POST["f-name"])) {
-            $first_nameErr = "Input Your First Name";
-        } else {
-            $first_name = test_input($_POST["first"]);
-            // check if name only contains letters and whitespace
-            if (!preg_match("/^[a-zA-Z ]*$/", $first_name)) {
-                $first_nameErr = "Only letters and white space allowed";
-            } else {
-                $first_name = $_POST["first"];
-                $sql = "INSERT INTO users ('Firstname') VALUE ('$first_name');";
-            }
-        }
+    $check_query = $link->query("SELECT * FROM users WHERE username = '" . $username . "' OR email = '" . $username . "'");
 
-        if (empty($_POST["l-name"])) {
-            $last_nameErr = "Input Your Last Name";
-        } else {
-            $last_name = test_input($_POST["last"]);
-            // check if name only contains letters and whitespace
-            if (!preg_match("/^[a-zA-Z ]*$/", $last_name)) {
-                $last_nameErr = "Only letters and white space allowed";
-            } else {
-                $last_name = $_POST["last"];
-                $sql = "INSERT INTO users ('Lastname') VALUE ('$last_name');";
-            }
-        }
+    if ($check_query->num_rows == 1) {
 
-        if (empty($_POST["psw-repeat"])) {
-            $r_passwordErr = "Please Confirm Your Password";
-        } else {
-            $r_password = test_input($_POST["psw-repeat"]);
-            //check if passwords match
-            $password1 = $_POST["psw"];
-            $password2 = $_POST["psw-repeat"];
-            if ($password1 != $password2) {
-                $r_passwordErr = "Passwords do not match";
-            }
-        }
-        }
-        else {
-            $sql = "INSERT INTO users ('Firstname','Lastname','username','password','email') VALUES ('$first_name','$last_name','$username','$password','$email');";
-            echo "REGISTRATION SUCCESSFUL!! Redirecting to Home Page for Login....";
+        echo "User ALready Exists";
+    } else {
+        $sql = "INSERT INTO users ('Firstname','Lastname','username','password','email') VALUES ('$first_name','$last_name','$username','$password','$email');";
+
+        $result = mysqli_query($link, $sql);
+        if ($result) {
+            echo "Success!! Login";
             header("location: index.html"); // Redirecting to Home Page
+        } else {
+            echo "Error!";
+            echo "<script> window.location.reload()</script>";
         }
-
+    }
 }
+
+
+
+
+
+
+
+//    if (empty($_POST["usn"])) {
+//            $usernameErr = "Name is required";
+//        } else {
+//            $username = test_input($_POST["usn"]);
+//            // check if name only contains letters and whitespace
+//            if (!preg_match("/^[a-zA-Z ]*$/", $username)) {
+//                $usernameErr = "Only letters and white space allowed";
+//            } else {
+//                $username = $_POST["usn"];
+//                $sql = "INSERT INTO users ('username') VALUE ('$username');";
+//            }
+//        }
+//
+//        if (empty($_POST["email"])) {
+//            $emailErr = "Email is required";
+//        } else {
+//            $email = test_input($_POST["email"]);
+//            // check if e-mail address is well-formed
+//            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+//                $emailErr = "Invalid email format";
+//            } else {
+//                $email = $_POST["email"];
+//                $sql = "INSERT INTO users ('email') VALUE ('$email');";
+//            }
+//        }
+//
+//        if (empty($_POST["psw"])) {
+//            $passwordErr = "Password is Required";
+//        } else {
+//            $password = test_input($_POST["psw"]);
+//        }
+//
+//        if (empty($_POST["f-name"])) {
+//            $first_nameErr = "Input Your First Name";
+//        } else {
+//            $first_name = test_input($_POST["first"]);
+//            // check if name only contains letters and whitespace
+//            if (!preg_match("/^[a-zA-Z ]*$/", $first_name)) {
+//                $first_nameErr = "Only letters and white space allowed";
+//            } else {
+//                $first_name = $_POST["first"];
+//                $sql = "INSERT INTO users ('Firstname') VALUE ('$first_name');";
+//            }
+//        }
+//
+//        if (empty($_POST["l-name"])) {
+//            $last_nameErr = "Input Your Last Name";
+//        } else {
+//            $last_name = test_input($_POST["last"]);
+//            // check if name only contains letters and whitespace
+//            if (!preg_match("/^[a-zA-Z ]*$/", $last_name)) {
+//                $last_nameErr = "Only letters and white space allowed";
+//            } else {
+//                $last_name = $_POST["last"];
+//                $sql = "INSERT INTO users ('Lastname') VALUE ('$last_name');";
+//            }
+//        }
+//
+//        if (empty($_POST["psw-repeat"])) {
+//            $r_passwordErr = "Please Confirm Your Password";
+//        } else {
+//            $r_password = test_input($_POST["psw-repeat"]);
+//            //check if passwords match
+//            $password1 = $_POST["psw"];
+//            $password2 = $_POST["psw-repeat"];
+//            if ($password1 != $password2) {
+//                $r_passwordErr = "Passwords do not match";
+//            }
+//        }
+////        }
+////        else {
+////            $sql = "INSERT INTO users ('Firstname','Lastname','username','password','email') VALUES ('$first_name','$last_name','$username','$password','$email');";
+////            echo "REGISTRATION SUCCESSFUL!! Redirecting to Home Page for Login....";
+////            header("location: index.html"); // Redirecting to Home Page
+////        }

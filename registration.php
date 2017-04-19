@@ -44,7 +44,7 @@ if (isset($_POST['signup'])) {
         } else {
             $sql = "INSERT INTO users ('Firstname','Lastname','username','password','email') VALUES ('$first_name','$last_name','$username','$password','$email');";
 
-            $result = mysqli_query($link, $sql);
+            $result = mysqli_query($db, $sql);
             if ($result) {
                 echo "Success!! Login";
                 header("location: index.html"); // Redirecting to Home Page

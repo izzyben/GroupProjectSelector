@@ -45,10 +45,11 @@ if ($uploadOk == 0) {
 // if everything is ok, try to upload file
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
         $image = addslashes(file_get_contents($_FILES['fileToUpload']['tmp_name'])); //SQL Injection defence!
         $image_name = addslashes($_FILES['fileToUpload']['name']);
         $sql = "INSERT INTO profilepictures (pic_id, username, image, image_name) VALUES ('1','$username', '$image', '$image_name')";
+        echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+
         if (!mysqli_query($sql)) { // Error handling
             echo "Something went wrong! :(";
         }

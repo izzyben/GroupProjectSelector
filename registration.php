@@ -52,8 +52,8 @@ include("dbconnect.php"); // Establishing connection with our database
 //    echo "</script>";
 //}
 
-$usernameErr = $emailErr = $passwordErr = $r_passwordErr = $first_nameErr = "";
-$username = $email = $password = $r_password = $first_name = "";
+$usernameErr = $emailErr = $passwordErr = $r_passwordErr = $last_nameErr = $first_nameErr = "";
+$username = $email = $password = $r_password = $last_name = $first_name = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = test_input($_POST["usn"]);
@@ -61,6 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = test_input($_POST["psw"]);
     $r_password = test_input($_POST["psw-repeat"]);
     $first_name = test_input($_POST["f-name"]);
+    $last_name = test_input($_POST["l-name"]);
 }
 
 function test_input($data) {

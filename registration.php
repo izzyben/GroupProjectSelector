@@ -29,21 +29,21 @@ if (isset($_POST['signup'])) {
         return $data;
     }
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $username = test_input($_POST["usn"]);
-        $email = test_input($_POST["email"]);
-        $password = test_input($_POST["psw"]);
-        $r_password = test_input($_POST["psw-repeat"]);
-        $first_name = test_input($_POST["first"]);
-        $last_name = test_input($_POST["last"]);
-    }
+//    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//        $username = test_input($_POST["usn"]);
+//        $email = test_input($_POST["email"]);
+//        $password = test_input($_POST["psw"]);
+//        $r_password = test_input($_POST["psw-repeat"]);
+//        $first_name = test_input($_POST["first"]);
+//        $last_name = test_input($_POST["last"]);
+//    }
 
 
         $user_check = $link->query("SELECT * FROM users WHERE username = '" . $username . "' OR email = '" . $username . "'");
 
         if ($user_check->num_rows == 1) {
 
-            echo "User ALready Exists";
+            echo "<script language='JavaScript'> alert('User ALready Exists'); </script>";
         } else {
             $sql = "INSERT INTO users ('Firstname','Lastname','username','password','email') VALUES ('$first_name','$last_name','$username','$password','$email');";
 

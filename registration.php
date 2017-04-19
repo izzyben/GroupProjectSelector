@@ -29,14 +29,7 @@ if (isset($_POST['signup'])) {
         return $data;
     }
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $username = test_input($_POST["usn"]);
-        $email = test_input($_POST["email"]);
-        $password = test_input($_POST["psw"]);
-        $r_password = test_input($_POST["psw-repeat"]);
-        $first_name = test_input($_POST["first"]);
-        $last_name = test_input($_POST["last"]);
-    }
+//
 
 
         $user_check = $db->query("SELECT * FROM users WHERE username = '" . $username . "' OR email = '" . $username . "'");
@@ -59,8 +52,18 @@ if (isset($_POST['signup'])) {
     }
 
 
+//if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//        $username = test_input($_POST["usn"]);
+//        $email = test_input($_POST["email"]);
+//        $password = test_input($_POST["psw"]);
+//        $r_password = test_input($_POST["psw-repeat"]);
+//        $first_name = test_input($_POST["first"]);
+//        $last_name = test_input($_POST["last"]);
+//    }
 
-/*//$username= $_POST['usn'];
+
+
+//$username= $_POST['usn'];
 //$password= $_POST['psw'];
 //$email= $_POST['usn'];
 //$r_password= $_POST['psw-repeat'];
@@ -103,7 +106,7 @@ if (isset($_POST['signup'])) {
 //    echo "window.location='index.html'";
 //    echo "</script>";
 //}
-
+/*
 $usernameErr = $emailErr = $passwordErr = $r_passwordErr = $last_nameErr = $first_nameErr = "";
 $username = $email = $password = $r_password = $last_name = $first_name = "";
 
@@ -117,7 +120,7 @@ $username = $email = $password = $r_password = $last_name = $first_name = "";
 //    $last_name = test_input($_POST["l-name"]);
 //}
 
-function test_input($data)
+/*function test_input($data)
 {
     $data = trim($data);
     $data = stripslashes($data);
@@ -125,8 +128,8 @@ function test_input($data)
     return $data;
 }
 
-
-//    if (empty($_POST["usn"])) {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+   if (empty($_POST["usn"])) {
 //            $usernameErr = "Name is required";
 //        } else {
 //            $username = test_input($_POST["usn"]);

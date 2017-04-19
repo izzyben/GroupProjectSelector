@@ -1,4 +1,6 @@
 <?php
+session_start();
+$username = $_SESSION['username'];
 /**
  * Created by PhpStorm.
  * User: Izzy Ben
@@ -11,7 +13,7 @@ $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 // Check if image file is a actual image or fake image
-if(isset($_POST["submit"])) {
+if(isset($_POST["upload"])) {
     $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
     if($check !== false) {
         echo "File is an image - " . $check["mime"] . ".";
@@ -44,6 +46,12 @@ if ($uploadOk == 0) {
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
         echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+        $image = addslashes(file_get_contents($_FILES['fileToUpload']['tmp_name'])); //SQL Injection defence!
+        $image_name = addslashes($_FILES['fileToUpload']['name']);
+        $sql = "INSERT INTO profilepictures (pic_id, username, image, image_name) VALUES ('1','$username', '{$image}', '{$image_name}')";
+        if (!mysqli_query($sql)) { // Error handling
+            echo "Something went wrong! :(";
+        }
     } else {
         echo "Sorry, there was an error uploading your file.";
     }

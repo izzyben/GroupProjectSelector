@@ -6,7 +6,7 @@
  * Time: 06:01
  */
 
-include("dbconnect.php"); // Establishing connection with our database
+require("dbconnect.php"); // Establishing connection with our database
 
 //echo htmlspecialchars($_SERVER['PHP_SELF']);
 
@@ -80,16 +80,11 @@ function test_input($data) {
     return $data;
 }
 
-if (empty($_POST[ 'usn']) && empty($_POST[ 'psw']) && empty($_POST[ 'email']) && empty($_POST[ 'f-name']) && empty($_POST['l-name']) && empty($_POST['psw-repeat'])) {
-    echo "ALL FIELDS HAVE TO BE FILLED OUT!!";
 
-    echo "<script language=\"JavaScript\">\n";
-    echo "alert('Username or Password was incorrect!');\n";
-    echo "window.location='index.html'";
-    echo "</script>";
-}
-else {
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+
+
+//if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (empty($_POST["usn"])) {
             $usernameErr = "Name is required";
         } else {
@@ -98,10 +93,10 @@ else {
             if (!preg_match("/^[a-zA-Z ]*$/", $username)) {
                 $usernameErr = "Only letters and white space allowed";
             }
-//        else {
-//            $username = $_POST["usn"];
-//            $sql = "INSERT INTO users ('username') VALUE ('$username');";
-//        }
+        else {
+            $username = $_POST["usn"];
+            $sql = "INSERT INTO users ('username') VALUE ('$username');";
+        }
         }
 
         if (empty($_POST["email"])) {
@@ -112,10 +107,10 @@ else {
             if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 $emailErr = "Invalid email format";
             }
-//        else{
-//            $email = $_POST["email"];
-//            $sql = "INSERT INTO users ('email') VALUE ('$email');";
-//        }
+        else{
+            $email = $_POST["email"];
+            $sql = "INSERT INTO users ('email') VALUE ('$email');";
+        }
         }
 
         if (empty($_POST["psw"])) {
@@ -132,10 +127,10 @@ else {
             if (!preg_match("/^[a-zA-Z ]*$/", $first_name)) {
                 $first_nameErr = "Only letters and white space allowed";
             }
-//        else{
-//            $first_name = $_POST["first"];
-//            $sql = "INSERT INTO users ('Firstname') VALUE ('$first_name');";
-//        }
+       else{
+            $first_name = $_POST["first"];
+            $sql = "INSERT INTO users ('Firstname') VALUE ('$first_name');";
+        }
         }
 
         if (empty($_POST["l-name"])) {
@@ -146,10 +141,10 @@ else {
             if (!preg_match("/^[a-zA-Z ]*$/", $last_name)) {
                 $last_nameErr = "Only letters and white space allowed";
             }
-//        else{
-//            $last_name = $_POST["last"];
-//            $sql = "INSERT INTO users ('Lastname') VALUE ('$last_name');";
-//        }
+       else{
+            $last_name = $_POST["last"];
+            $sql = "INSERT INTO users ('Lastname') VALUE ('$last_name');";
+        }
         }
 
         if (empty($_POST["psw-repeat"])) {
@@ -163,9 +158,8 @@ else {
                 $r_passwordErr = "Passwords do not match";
             }
         }
-    } else {
-        $sql = "INSERT INTO users ('Firstname','Lastname','username','password','email') VALUES ('$first_name','$last_name','$username','$password','$email');";
-        echo "REGISTRATION SUCCESSFUL!! Redirecting to Home Page for Login....";
-        header("location: index.html"); // Redirecting to Home Page
-    }
-}
+// else {
+  //      $sql = "INSERT INTO users ('Firstname','Lastname','username','password','email') VALUES ('$first_name','$last_name','$username','$password','$email');";
+ //       echo "REGISTRATION SUCCESSFUL!! Redirecting to Home Page for Login....";
+ //       header("location: index.html"); // Redirecting to Home Page
+  //  }

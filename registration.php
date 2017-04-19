@@ -14,32 +14,32 @@ if (isset($_POST['signup'])) {
     $first_name = $_POST['first'];
     $last_name = $_POST['first'];
 
-//    $username = test_input($_POST['usn']);
-//    $email = test_input($_POST['email']);
-//    $password = test_input($_POST['psw']);
-//    $r_password = test_input($_POST['psw-repeat']);
-//    $first_name = test_input($_POST['first']);
-//    $last_name = test_input($_POST['last']);
-//
-//    function test_input($data)
-//    {
-//        $data = trim($data);
-//        $data = stripslashes($data);
-//        $data = htmlspecialchars($data);
-//        return $data;
-//    }
+   $username = test_input($_POST['usn']);
+    $email = test_input($_POST['email']);
+    $password = test_input($_POST['psw']);
+    $r_password = test_input($_POST['psw-repeat']);
+    $first_name = test_input($_POST['first']);
+    $last_name = test_input($_POST['last']);
 
-//    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-//        $username = test_input($_POST["usn"]);
-//        $email = test_input($_POST["email"]);
-//        $password = test_input($_POST["psw"]);
-//        $r_password = test_input($_POST["psw-repeat"]);
-//        $first_name = test_input($_POST["first"]);
-//        $last_name = test_input($_POST["last"]);
-//    }
+    function test_input($data)
+    {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $username = test_input($_POST["usn"]);
+        $email = test_input($_POST["email"]);
+        $password = test_input($_POST["psw"]);
+        $r_password = test_input($_POST["psw-repeat"]);
+        $first_name = test_input($_POST["first"]);
+        $last_name = test_input($_POST["last"]);
+    }
 
 
-        $user_check = $link->query("SELECT * FROM users WHERE username = '" . $username . "' OR email = '" . $username . "'");
+        $user_check = $db->query("SELECT * FROM users WHERE username = '" . $username . "' OR email = '" . $username . "'");
 
         if ($user_check->num_rows == 1) {
 

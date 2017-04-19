@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include("dbconnect.php"); // Establishing connection with our database
 if(empty($_POST[ 'username']) || empty($_POST[ 'password']))
  {

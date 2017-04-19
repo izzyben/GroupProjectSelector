@@ -82,6 +82,11 @@ function test_input($data) {
 
 if (empty($_POST[ 'usn']) && empty($_POST[ 'psw']) && empty($_POST[ 'email']) && empty($_POST[ 'f-name']) && empty($_POST['l-name']) && empty($_POST['psw-repeat'])) {
     echo "ALL FIELDS HAVE TO BE FILLED OUT!!";
+
+    echo "<script language=\"JavaScript\">\n";
+    echo "alert('Username or Password was incorrect!');\n";
+    echo "window.location='index.html'";
+    echo "</script>";
 }
 else {
     if ($_SERVER["REQUEST_METHOD"] == "POST") {

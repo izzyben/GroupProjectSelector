@@ -10,7 +10,7 @@ if (isset($_POST['signup1']))
     $first_name = $_POST['first'];
     $last_name = $_POST['last'];
 
-    $sql = "INSERT INTO users ('Firstname','Lastname','username','password','email') VALUES ('$first_name','$last_name','$username','$password','$email');";
+    $sql = "INSERT INTO users (Firstname,Lastname,username,password,email) VALUES ('$first_name','$last_name','$username','$password','$email');";
 
     $result = mysqli_query($db, $sql);
     if ($result) {
@@ -19,6 +19,6 @@ if (isset($_POST['signup1']))
     }
     else {
         echo "<script language='JavaScript'> alert('Error in registering'); </script>";
-        echo "<script type='text/javascript'> window.location='index.php'</script>";
+        echo "<script type='text/javascript'> window.location='index.html'</script>";
     }
 }

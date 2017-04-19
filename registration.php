@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Izzy Ben
- * Date: 13/04/2017
- * Time: 06:01
- */
+
 
 require("dbconnect.php"); // Establishing connection with our database
 
@@ -197,3 +192,4 @@ if (isset($_POST['signup'])) {
 ////            echo "REGISTRATION SUCCESSFUL!! Redirecting to Home Page for Login....";
 ////            header("location: index.html"); // Redirecting to Home Page
 ////        }
+?>

@@ -101,7 +101,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["f-name"])) {
         $first_nameErr = "Input Your First Name";
     } else {
-        $first_name = test_input($_POST["f-name"]);
+        $first_name = test_input($_POST["first"]);
         // check if name only contains letters and whitespace
         if (!preg_match("/^[a-zA-Z ]*$/",$first_name)) {
             $first_nameErr = "Only letters and white space allowed";
@@ -111,7 +111,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["l-name"])) {
         $last_nameErr = "Input Your Last Name";
     } else {
-        $last_name = test_input($_POST["l-name"]);
+        $last_name = test_input($_POST["last"]);
         // check if name only contains letters and whitespace
         if (!preg_match("/^[a-zA-Z ]*$/",$last_name)) {
             $last_nameErr = "Only letters and white space allowed";

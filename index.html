@@ -127,7 +127,7 @@
 
         <section class="">
             <p class="futura" style="text-transform: uppercase; text-align: center; margin-top: 5px; font-style: normal; font-weight: 600">Sign up using your email address</p>
-            <form method="post" action="registration.php"> <!--htmlspecialchars() function prevents Cross-site Scripting attacks in forms--><!--$_SERVER["PHP_SELF"] sends the submitted form data to the page itself-->
+            <form method="post" action="register2.php"> <!--htmlspecialchars() function prevents Cross-site Scripting attacks in forms--><!--$_SERVER["PHP_SELF"] sends the submitted form data to the page itself-->
                 <section class="regcontainer">
                     <label><b>First Name</b></label>
                     <input class="user" type="text"  placeholder='Enter Firstname' onfocus="this.value = ''" name="first" required/><span class="error">* <?php echo $f-nameErr;?></span><br><br>

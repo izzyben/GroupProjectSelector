@@ -76,12 +76,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $usernameErr = "Name is required";
     } else {
         $username = test_input($_POST["usn"]);
+        // check if name only contains letters and whitespace
+        if (!preg_match("/^[a-zA-Z ]*$/",$username)) {
+            $usernameErr = "Only letters and white space allowed";
+        }
     }
 
     if (empty($_POST["email"])) {
         $emailErr = "Email is required";
     } else {
         $email = test_input($_POST["email"]);
+        // check if e-mail address is well-formed
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $emailErr = "Invalid email format";
+        }
     }
 
     if (empty($_POST["psw"])) {
@@ -91,15 +99,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if (empty($_POST["f-name"])) {
-        $first_name = "Input Your First Name";
+        $first_nameErr = "Input Your First Name";
     } else {
         $first_name = test_input($_POST["f-name"]);
+        // check if name only contains letters and whitespace
+        if (!preg_match("/^[a-zA-Z ]*$/",$first_name)) {
+            $first_nameErr = "Only letters and white space allowed";
+        }
     }
 
     if (empty($_POST["l-name"])) {
-        $last_name = "Input Your Last Name";
+        $last_nameErr = "Input Your Last Name";
     } else {
         $last_name = test_input($_POST["l-name"]);
+        // check if name only contains letters and whitespace
+        if (!preg_match("/^[a-zA-Z ]*$/",$last_name)) {
+            $last_nameErr = "Only letters and white space allowed";
+        }
     }
 
     if (empty($_POST["psw-repeat"])) {

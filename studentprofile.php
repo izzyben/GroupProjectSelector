@@ -93,7 +93,7 @@ $username = $_SESSION['username'];
 
     <!--Photo Upload Popup Box-->
     <section id="id03" class="modal" style="cursor:pointer">
-        <section class="modal-form animate-zoom" style="max-width: 300px; cursor:auto">
+        <section class="modal-form animate-zoom" style="max-width: 500px; cursor:auto">
             <section class="modal-center"><br>
                 <span onclick="document.getElementById('id03').style.display='none'" class="closebtn closebtn-size closebtn-position closebtn:hover closebtn:focus" title="Close Form">&times</span>
                 <img src="" alt="Change upload photo" style="width: 40%" class="changepic"

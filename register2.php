@@ -19,6 +19,6 @@ if (isset($_POST['signup1']))
     }
     else {
         echo "Error!";
-        header("Refresh:0");
+        header("location: index.html");
     }
 }

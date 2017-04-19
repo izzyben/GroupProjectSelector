@@ -57,12 +57,21 @@ require("dbconnect.php"); // Establishing connection with our database
 $usernameErr = $emailErr = $passwordErr = $r_passwordErr = $last_nameErr = $first_nameErr = "";
 $username = $email = $password = $r_password = $last_name = $first_name = "";
 
+
 $username = $_POST["usn"];
 $email = $_POST["email"];
 $password = $_POST["psw"];
 $r_password = $_POST["psw-repeat"];
 $first_name = $_POST["f-name"];
 $last_name = $_POST["l-name"];
+
+if (isset($username) && ($email) && ($password) && ($r_password) && ($first_name) && ($last_name)) {
+
+    $insert = "INSERT INTO 'users' (Firstname,Lastname,username,password,email) VALUES ('$first_name','$last_name','$username','$password','$email');";
+    echo "REGISTRATION SUCCESSFUL!! Redirecting to Home Page for Login....";
+    header("location: index.html"); // Redirecting to Home Page
+}
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = test_input($_POST["usn"]);

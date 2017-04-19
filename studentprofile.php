@@ -26,6 +26,7 @@ $username = $_SESSION['username'];
     <meta name="msapplication-TileColor" content="#3372DF">
 
     <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="stylesheet" href="/css/style.css" type="text/css" /> <!--Link to My Stylesheet-->
 
     <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
     <!--
@@ -75,7 +76,7 @@ $username = $_SESSION['username'];
                 </button>
                 <section>
                 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
-                    <li class="mdl-menu__item"><a href="">Change Profile Picture</a></li>
+                    <li class="mdl-menu__item"><a onclick="document.getElementById('id03').style.display='block'">Change Profile Picture</a></li>
                 </ul>
                 </section>
             </section>
@@ -88,6 +89,24 @@ $username = $_SESSION['username'];
             <div class="mdl-layout-spacer"></div>
         </div>
     </div>
+
+
+    <!--Photo Upload Popup Box-->
+    <section id="id03" class="modal" style="cursor:pointer">
+        <section class="modal-form animate-zoom" style="max-width: 300px; cursor:auto">
+            <section class="modal-center"><br>
+                <span onclick="document.getElementById('id03').style.display='none'" class="closebtn closebtn-size closebtn-position closebtn:hover closebtn:focus" title="Close Form">&times</span>
+                <img src="" alt="Change upload photo" style="width: 40%" class="changepic"
+            </section>
+            <section class="form-container">
+                <form action="fileupload.php" method="post" enctype="multipart/form-data">
+                    Select image to upload:
+                    <input type="file" name="fileToUpload" id="fileToUpload">
+                    <input type="submit" value="Upload Image" name="submit">
+                </form>
+            </section>
+        </section>
+    </section>
 
     <!--Javascript for Menu Navigation-->
     <script>

@@ -92,6 +92,12 @@ $username = $_SESSION['username'];
         </div>
     </div>
 
+    <div id="Prof" class="tabcontent">
+        <label> First Name: <?php echo $username ?></label><br><br>
+        <label> Last Name: <?php echo $username ?></label><br><br>
+        <label> Email Address:</label><br><br>
+    </div>
+
 
     <!--Photo Upload Popup Box-->
     <section id="id03" class="modal" style="cursor:pointer">
@@ -136,12 +142,7 @@ $username = $_SESSION['username'];
     </script>
 
 
-    <main class="mdl-layout__content mdl-color--grey-100" onload=document.getElementById('Prof').style.display='block'>
-        <div id="Prof">
-            <label> First Name: <?php echo $username ?></label><br><br>
-            <label> Last Name: <?php echo $username ?></label><br><br>
-            <label> Email Address:</label><br><br>
-        </div>
+    <main class="mdl-layout__content mdl-color--grey-100">
         <div class="mdl-grid demo-content">
             <div id="Hme" class="tabcontent">
                 <h3>Thank God it worked!!!!</h3>

@@ -70,7 +70,7 @@ $username = $_SESSION['username'];
         <header class="demo-drawer-header">
             <img src="images/user.jpg" class="demo-avatar">
             <section class="demo-avatar-dropdown">
-                <span><?php echo $email;?><p>Student</p></span>
+                <span><?php echo $username;?><p>Student</p></span>
                 <div class="mdl-layout-spacer"></div>
                 <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                     <i class="material-icons" role="presentation">arrow_drop_down</i>

@@ -120,6 +120,31 @@ $lastname = $db->query("SELECT lastname FROM users WHERE username = '$username';
         </section>
     </section>
 
+    <!--Javascript for Menu Navigation-->
+    <script>
+        function openMenu(evt, menuName) {
+            // Declare all variables
+            var i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the link that opened the tab
+            document.getElementById(menuName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+
+
 
     <main class="mdl-layout__content mdl-color--grey-100">
         <div class="mdl-grid demo-content">
@@ -143,38 +168,15 @@ $lastname = $db->query("SELECT lastname FROM users WHERE username = '$username';
                 <p>Group Tab</p>
             </div>
 
-            <!--Javascript for Menu Navigation-->
-            <script>
-                function openMenu(evt, menuName) {
-                    // Declare all variables
-                    var i, tabcontent, tablinks;
-
-                    // Get all elements with class="tabcontent" and hide them
-                    tabcontent = document.getElementsByClassName("tabcontent");
-                    for (i = 0; i < tabcontent.length; i++) {
-                        tabcontent[i].style.display = "none";
-                    }
-
-                    // Get all elements with class="tablinks" and remove the class "active"
-                    tablinks = document.getElementsByClassName("tablinks");
-                    for (i = 0; i < tablinks.length; i++) {
-                        tablinks[i].className = tablinks[i].className.replace(" active", "");
-                    }
-
-                    // Show the current tab, and add an "active" class to the link that opened the tab
-                    document.getElementById(menuName).style.display = "block";
-                    evt.currentTarget.className += " active";
-                }
-
         </div>
+
+
+
     </main>
 </div>
 
 <script src="Javascript/material.min.js"></script>
 
-
-
-</script>
 
 </body>
 </html>

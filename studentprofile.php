@@ -1,6 +1,8 @@
 <?php
+include("dbconnect.php");
 session_start();
 $username = $_SESSION['username'];
+$email = $db->query("SELECT email FROM users WHERE username = '$username';");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -53,7 +55,7 @@ $username = $_SESSION['username'];
 <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
     <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
         <div class="mdl-layout__header-row">
-            <span class="mdl-layout-title">Home</span>
+            <span class="mdl-layout-title"><?php echo $username;?>Profile</span>
             <div class="mdl-layout-spacer"></div>
 
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
@@ -68,7 +70,7 @@ $username = $_SESSION['username'];
         <header class="demo-drawer-header">
             <img src="images/user.jpg" class="demo-avatar">
             <section class="demo-avatar-dropdown">
-                <span><?php echo $username;?><p>Student</p></span>
+                <span><?php echo $email;?><p>Student</p></span>
                 <div class="mdl-layout-spacer"></div>
                 <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                     <i class="material-icons" role="presentation">arrow_drop_down</i>

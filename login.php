@@ -1,7 +1,7 @@
 <?php
 session_start();
 include("dbconnect.php"); // Establishing connection with our database
-if(empty($_POST[ 'username']) || empty($_POST[ 'password']))
+if(empty($_POST[ 'username']) || empty(md5($_POST[ 'password'])))
  {
      echo "Both fields are required.";
  }
@@ -9,7 +9,7 @@ if(empty($_POST[ 'username']) || empty($_POST[ 'password']))
 
  {
      $username=$_POST["username"];
-     $password = $_POST["password"];
+     $password = md($_POST["password"]);
 
 $sql = "SELECT user_id FROM users WHERE (username='$username' OR email='$username') and password='$password';";
 $result = mysqli_query($db,$sql);

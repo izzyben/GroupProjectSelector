@@ -136,7 +136,7 @@ $username = $_SESSION['username'];
     </script>
 
 
-    <main class="mdl-layout__content mdl-color--grey-100">
+    <main class="mdl-layout__content mdl-color--grey-100" onload="openMenu(event,'Prof')">
         <div class="mdl-grid demo-content">
             <div id="Hme" class="tabcontent">
                 <h3>Thank God it worked!!!!</h3>

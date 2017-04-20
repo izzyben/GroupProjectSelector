@@ -94,12 +94,6 @@ $username = $_SESSION['username'];
 
     </div>
 
-    <div id="Prof" style="width: 50%; margin-left: 30%">
-        <label> First Name: <?php echo $username ?></label><br><br>
-        <label> Last Name: <?php echo $username ?></label><br><br>
-        <label> Email Address:</label><br><br>
-    </div>
-
 
     <!--Photo Upload Popup Box-->
     <section id="id03" class="modal" style="cursor:pointer">
@@ -139,6 +133,12 @@ $username = $_SESSION['username'];
             <div id="Grp" class="tabcontent">
                 <h3>Thank God</h3>
                 <p>Group Tab</p>
+            </div>
+
+            <div id="Prof" style="width: 50%; margin-left: 30%">
+                <label> First Name: <?php echo $username ?></label><br><br>
+                <label> Last Name: <?php echo $username ?></label><br><br>
+                <label> Email Address:</label><br><br>
             </div>
 
         </div>

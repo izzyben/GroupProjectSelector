@@ -93,7 +93,7 @@ $lastname = $db->query("SELECT lastname FROM users WHERE username = '$username';
             </section>
         </header>
         <div class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-            <button class="mdl-navigation__link tablinks"  href="" onclick="openMenu(event,'Hme'); document.getElementById('Prof').style.display='none'"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i><b style="color: #0d47a1">Home</b></button>
+            <button class="mdl-navigation__link tablinks"  href="" onclick="openMenu(event,'Hme')"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i><b style="color: #0d47a1">Home</b></button>
             <button class="mdl-navigation__link tablinks" href="" onclick="openMenu(event,'Inb')"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i><b style="color: #0d47a1">Inbox</b></button>
             <button class="mdl-navigation__link tablinks" href="" onclick="openMenu(event,'Msg')"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i><b style="color: #0d47a1">Send Message</b></button>
             <button class="mdl-navigation__link tablinks" href="" onclick="openMenu(event,'Grp')"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">people</i><b style="color: #0d47a1">Group</b></button>

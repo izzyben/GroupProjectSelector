@@ -158,6 +158,12 @@ $username = $_SESSION['username'];
                 <p>Group Tab</p>
             </div>
 
+            <div id="Prof" class="tabcontent">
+                <label> First Name: <?php echo $username ?></label><br><br>
+                <label> Last Name: <?php echo $username ?></label><br><br>
+                <label> Email Address:</label><br><br>
+            </div>
+
         </div>
     </main>
 </div>

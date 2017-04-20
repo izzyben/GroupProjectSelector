@@ -70,9 +70,9 @@ $lastname = $db->query("SELECT lastname FROM users WHERE username = '$username';
     </header>
 
     <div id="Prof" style="width: 50%; margin-left: 30%">
-        <label> First Name: <?php echo $firstname ?></label><br><br>
-        <label> Last Name: <?php echo $lastname ?></label><br><br>
-        <label> Email Address: <?php echo $email ?></label><br><br>
+        <label> First Name: <?php echo $username ?></label><br><br>
+        <label> Last Name: <?php echo $username ?></label><br><br>
+        <label> Email Address: <?php echo $username ?></label><br><br>
     </div>
 
     <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">

@@ -94,7 +94,7 @@ $username = $_SESSION['username'];
 
     </div>
 
-    <div id="Prof">
+    <div id="Prof" style="float: right">
         <label> First Name: <?php echo $username ?></label><br><br>
         <label> Last Name: <?php echo $username ?></label><br><br>
         <label> Email Address:</label><br><br>

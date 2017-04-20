@@ -1,10 +1,6 @@
 <?php
-include("dbconnect.php");
 session_start();
 $username = $_SESSION['username'];
-$firstname = $db->query("SELECT firstname FROM users WHERE username = '$username';");
-$email = $db->query("SELECT email FROM users WHERE username = '$username';");
-$lastname = $db->query("SELECT lastname FROM users WHERE username = '$username';");
 ?>
 <!DOCTYPE html>
 <html lang="en">

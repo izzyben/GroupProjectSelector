@@ -70,9 +70,9 @@ $lastname = $db->query("SELECT lastname FROM users WHERE username = '$username';
     </header>
 
 <!--    <div id="Prof" style="width: 50%; margin-left: 20%">-->
-<!--        <label> First Name: --><?php //echo $username ?><!--</label><br><br>-->
-<!--        <label> Last Name: --><?php //echo $username ?><!--</label><br><br>-->
-<!--        <label> Email Address: --><?php //echo $username ?><!--</label><br><br>-->
+<!--        <label> First Name: --><!--</label><br><br>-->
+<!--        <label> Last Name: --><!--</label><br><br>-->
+<!--        <label> Email Address: --><!--</label><br><br>-->
 <!--    </div>-->
 
     <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
@@ -93,10 +93,10 @@ $lastname = $db->query("SELECT lastname FROM users WHERE username = '$username';
             </section>
         </header>
         <div class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-            <button class="mdl-navigation__link tablinks"  href="" onclick="openMenu(event,'Hme')"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i><b style="color: #0d47a1">Home</b></button>
-            <button class="mdl-navigation__link tablinks" href="" onclick="openMenu(event,'Inb')"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i><b style="color: #0d47a1">Inbox</b></button>
-            <button class="mdl-navigation__link tablinks" href="" onclick="openMenu(event,'Msg')"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i><b style="color: #0d47a1">Send Message</b></button>
-            <button class="mdl-navigation__link tablinks" href="" onclick="openMenu(event,'Grp')"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">people</i><b style="color: #0d47a1">Group</b></button>
+            <button class="mdl-navigation__link tablinks"  onclick="openMenu(event,'Hme')"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i><b style="color: #0d47a1">Home</b></button>
+            <button class="mdl-navigation__link tablinks"  onclick="openMenu(event,'Inb')"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i><b style="color: #0d47a1">Inbox</b></button>
+            <button class="mdl-navigation__link tablinks"  onclick="openMenu(event,'Msg')"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i><b style="color: #0d47a1">Send Message</b></button>
+            <button class="mdl-navigation__link tablinks"  onclick="openMenu(event,'Grp')"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">people</i><b style="color: #0d47a1">Group</b></button>
             <div class="mdl-layout-spacer"></div>
         </div>
 
@@ -122,10 +122,10 @@ $lastname = $db->query("SELECT lastname FROM users WHERE username = '$username';
                 document.getElementById(menuName).style.display = "block";
                 evt.currentTarget.className += " active";
             }
+
         </script>
 
     </div>
-
 
     <!--Photo Upload Popup Box-->
     <section id="id03" class="modal" style="cursor:pointer">
@@ -143,10 +143,6 @@ $lastname = $db->query("SELECT lastname FROM users WHERE username = '$username';
             </section>
         </section>
     </section>
-
-
-
-
 
     <main class="mdl-layout__content mdl-color--grey-100">
         <div class="mdl-grid demo-content">
@@ -171,9 +167,6 @@ $lastname = $db->query("SELECT lastname FROM users WHERE username = '$username';
             </div>
 
         </div>
-
-
-
     </main>
 </div>
 

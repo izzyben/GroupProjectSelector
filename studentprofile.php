@@ -67,14 +67,6 @@ $username = $_SESSION['username'];
         </div>
     </header>
 
-
-    <div id="Prof">
-        <label> First Name: <?php echo $username ?></label><br><br>
-        <label> Last Name: <?php echo $username ?></label><br><br>
-        <label> Email Address:</label><br><br>
-    </div>
-
-
     <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
         <header class="demo-drawer-header">
             <img src="images/user.jpg" class="demo-avatar">
@@ -102,7 +94,11 @@ $username = $_SESSION['username'];
 
     </div>
 
-
+    <div id="Prof">
+        <label> First Name: <?php echo $username ?></label><br><br>
+        <label> Last Name: <?php echo $username ?></label><br><br>
+        <label> Email Address:</label><br><br>
+    </div>
 
 
     <!--Photo Upload Popup Box-->

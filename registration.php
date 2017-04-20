@@ -14,8 +14,6 @@ if (isset($_POST['signup'])) {
     $first_name = $_POST['first'];
     $last_name = $_POST['first'];
 
-    $password=md5($password);
-    $r_password = md5($r_password);
 
 //   $username = test_input($_POST['usn']);
 //    $email = test_input($_POST['email']);

@@ -69,7 +69,7 @@ $username = $_SESSION['username'];
         <label> First Name: </label><br><br>
         <label> Last Name: </label><br><br>
         <label> Email Address: </label><br><br>
-    </div>-->
+    </div>
 
     <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
         <header class="demo-drawer-header">

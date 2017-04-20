@@ -137,6 +137,11 @@ $username = $_SESSION['username'];
 
 
     <main class="mdl-layout__content mdl-color--grey-100" onload=document.getElementById('Prof').style.display='block'>
+        <div id="Prof">
+            <label> First Name: <?php echo $username ?></label><br><br>
+            <label> Last Name: <?php echo $username ?></label><br><br>
+            <label> Email Address:</label><br><br>
+        </div>
         <div class="mdl-grid demo-content">
             <div id="Hme" class="tabcontent">
                 <h3>Thank God it worked!!!!</h3>
@@ -156,12 +161,6 @@ $username = $_SESSION['username'];
             <div id="Grp" class="tabcontent">
                 <h3>Thank God</h3>
                 <p>Group Tab</p>
-            </div>
-
-            <div id="Prof" class="tabcontent">
-                <label> First Name: <?php echo $username ?></label><br><br>
-                <label> Last Name: <?php echo $username ?></label><br><br>
-                <label> Email Address:</label><br><br>
             </div>
 
         </div>

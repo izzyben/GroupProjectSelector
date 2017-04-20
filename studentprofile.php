@@ -90,13 +90,16 @@ $username = $_SESSION['username'];
             <button class="mdl-navigation__link tablinks" href="" onclick="openMenu(event,'Grp')"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">people</i><b style="color: #0d47a1">Group</b></button>
             <div class="mdl-layout-spacer"></div>
         </div>
+
+        <div id="Prof" class="tabcontent">
+            <label> First Name: <?php echo $username ?></label><br><br>
+            <label> Last Name: <?php echo $username ?></label><br><br>
+            <label> Email Address:</label><br><br>
+        </div>
+
     </div>
 
-    <div id="Prof" class="tabcontent">
-        <label> First Name: <?php echo $username ?></label><br><br>
-        <label> Last Name: <?php echo $username ?></label><br><br>
-        <label> Email Address:</label><br><br>
-    </div>
+
 
 
     <!--Photo Upload Popup Box-->

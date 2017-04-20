@@ -9,8 +9,8 @@ if (isset($_POST['signup'])) {
 
     $username = $_POST['usn'];
     $email = $_POST['email'];
-    $password = md5($_POST['psw']);
-    $r_password = md5($_POST['psw-repeat']);
+    $password = $_POST['psw'];
+    $r_password = $_POST['psw-repeat'];
     $first_name = $_POST['first'];
     $last_name = $_POST['first'];
 

@@ -2,7 +2,9 @@
 include("dbconnect.php");
 session_start();
 $username = $_SESSION['username'];
-//$email = $db->query("SELECT email FROM users WHERE username = '$username';");
+$firstname = $db->query("SELECT firstname FROM users WHERE username = '$username';");
+$email = $db->query("SELECT email FROM users WHERE username = '$username';");
+$lastname = $db->query("SELECT lastname FROM users WHERE username = '$username';");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -67,6 +69,12 @@ $username = $_SESSION['username'];
         </div>
     </header>
 
+    <div id="Prof" style="width: 50%; margin-left: 30%">
+        <label> First Name: <?php echo $firstname ?></label><br><br>
+        <label> Last Name: <?php echo $lastname ?></label><br><br>
+        <label> Email Address: <?php echo $email ?></label><br><br>
+    </div>
+
     <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
         <header class="demo-drawer-header">
             <img src="images/user.jpg" class="demo-avatar">
@@ -100,7 +108,7 @@ $username = $_SESSION['username'];
         <section class="modal-form animate-zoom" style="max-width: 500px; cursor:auto">
             <section class="modal-center"><br>
                 <span onclick="document.getElementById('id03').style.display='none'" class="closebtn closebtn-size closebtn-position closebtn:hover closebtn:focus" title="Close Form">&times</span>
-                <img src="" alt="Change upload photo" style="width: 40%" class="changepic"
+                <img src="images/profile%20pic.jpg" alt="Change upload photo" style="width: 40%" class="changepic"
             </section>
             <section class="form-container">
                 <form action="fileupload.php" method="post" enctype="multipart/form-data">
@@ -135,11 +143,6 @@ $username = $_SESSION['username'];
                 <p>Group Tab</p>
             </div>
 
-            <div id="Prof" style="width: 50%; margin-left: 30%">
-                <label> First Name: <?php echo $username ?></label><br><br>
-                <label> Last Name: <?php echo $username ?></label><br><br>
-                <label> Email Address:</label><br><br>
-            </div>
 
         </div>
     </main>

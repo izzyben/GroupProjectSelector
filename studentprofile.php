@@ -69,11 +69,11 @@ $lastname = $db->query("SELECT lastname FROM users WHERE username = '$username';
         </div>
     </header>
 
-    <div id="Prof" style="width: 50%; margin-left: 20%">
-        <label> First Name: <?php echo $username ?></label><br><br>
-        <label> Last Name: <?php echo $username ?></label><br><br>
-        <label> Email Address: <?php echo $username ?></label><br><br>
-    </div>
+<!--    <div id="Prof" style="width: 50%; margin-left: 20%">-->
+<!--        <label> First Name: --><?php //echo $username ?><!--</label><br><br>-->
+<!--        <label> Last Name: --><?php //echo $username ?><!--</label><br><br>-->
+<!--        <label> Email Address: --><?php //echo $username ?><!--</label><br><br>-->
+<!--    </div>-->
 
     <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
         <header class="demo-drawer-header">

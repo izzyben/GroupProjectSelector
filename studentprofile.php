@@ -69,7 +69,7 @@ $lastname = $db->query("SELECT lastname FROM users WHERE username = '$username';
         </div>
     </header>
 
-    <div id="Prof" style="width: 50%; margin-left: 30%">
+    <div id="Prof" style="width: 50%; margin-left: 20%">
         <label> First Name: <?php echo $username ?></label><br><br>
         <label> Last Name: <?php echo $username ?></label><br><br>
         <label> Email Address: <?php echo $username ?></label><br><br>

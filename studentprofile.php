@@ -68,7 +68,7 @@ $username = $_SESSION['username'];
     </header>
 
 
-    <div id="Prof" class="tabcontent">
+    <div id="Prof">
         <label> First Name: <?php echo $username ?></label><br><br>
         <label> Last Name: <?php echo $username ?></label><br><br>
         <label> Email Address:</label><br><br>

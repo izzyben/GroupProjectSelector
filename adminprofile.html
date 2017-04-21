@@ -193,14 +193,14 @@
                 <input type="text" id="studnum" value="2" style="width: 4%; border: hidden "><br><br>
 
                 <textarea autofocus="autofocus" style="width: 20em; height: 13.5em" onblur="this.placeholder='Please Type the Names of Students to be Grouped in a line each....'" onfocus="this.placeholder=''"></textarea>
+                <input type="button" name="listUpload" id="listUpload">
 
             </form>
         </section>
-        <section class="form-container">
+        <section class="form-container clearfix">
             <form action="fileupload.php" method="post" enctype="multipart/form-data">
-                Select image to upload:
-                <input type="file" name="fileToUpload" id="fileToUpload">
-                <input type="submit" value="Upload Image" name="upload">
+                <button type="button" name="cancelgrp" class="regcancelbtn">Cancel Group Creation</button>
+                <button type="submit" class="button" name="grpcreate">Create Group</button>
             </form>
         </section>
     </section>

@@ -81,7 +81,7 @@
                 </button>
                 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
                     <li class="mdl-menu__item">Change Profile Picture</li>
-                    <li class="mdl-menu__item"><i class="material-icons">add</i>Create Group...</li>
+                    <li class="mdl-menu__item"><i class="material-icons">add</i><a onclick="document.getElementById('id01').style.display='block'"> Create Group...</a></li>
                 </ul>
             </div>
         </header>
@@ -100,8 +100,11 @@
         <section id="id01" class="modal" style="cursor:pointer">
             <section class="modal-form animate-zoom" style="max-width: 500px; cursor:auto">
                 <section class="modal-center"><br>
+                    <header class="demo-header mdl-layout__header mdl-color--green-100 is-casting-shadow">
+                        <span class="mdl-layout-title">Create Group Randomly</span>
                     <span onclick="document.getElementById('id01').style.display='none'" class="closebtn closebtn-size closebtn-position closebtn:hover closebtn:focus" title="Close Form">&times</span>
-                    <img src="images/profile%20pic.jpg" alt="Change upload photo" style="width: 40%" class="changepic"
+                    </header>
+                    <img src="images/profile%20pic.jpg" alt="Change upload photo" style="width: 40%" class="changepic">
                 </section>
                 <section class="form-container">
                     <form action="fileupload.php" method="post" enctype="multipart/form-data">

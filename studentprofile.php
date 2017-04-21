@@ -3,7 +3,7 @@ session_start();
 include("dbconnect.php"); // Establishing connection with our database
 $username = $_SESSION['username'];
 
-$sql= query("SELECT * FROM users WHERE username=$username;");
+$sql= $db -> query("SELECT * FROM users WHERE username=$username;");
 
 while ($result = mysqli_fetch_array($sql)){
     $email = $result['email'];
@@ -59,6 +59,23 @@ while ($result = mysqli_fetch_array($sql)){
     </style>
 </head>
 <body>
+
+<?php
+session_start();
+include("dbconnect.php"); // Establishing connection with our database
+$username = $_SESSION['username'];
+
+$sql= $db-> query("SELECT * FROM users WHERE username=$username;");
+
+while ($result = mysqli_fetch_array($sql)){
+    $email = $result['email'];
+    $firstname = $result['Firstname'];
+    $lastname = $result['Lastname'];
+}
+?>
+
+
+
 <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
     <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
         <div class="mdl-layout__header-row">

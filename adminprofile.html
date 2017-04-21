@@ -121,6 +121,12 @@
 
         </script>
 
+        <script>
+            function groupNumber(val) {
+                document.getElementById('grpnum').value=val;
+            }
+        </script>
+
 
     </div>
     <main class="mdl-layout__content mdl-color--grey-100">
@@ -176,7 +182,10 @@
                 <input type="range" min="2" max="30" value="2"><br><br>
 
                 <label>Students Per Group</label>
-                <input type="range" min="2" max="10" value="2"><br><br>
+                <section style="margin-left: 1em">
+                    <header><input type="text" id="grpnum" value="2"></header>
+                <input type="range" min="2" max="10" value="2" onchange="groupNumber(this.value);"><br><br>
+                </section>
 
             </form>
         </section>

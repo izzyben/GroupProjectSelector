@@ -14,7 +14,7 @@ try {
                FROM users
               WHERE username = $username';
 
-    $q = $pdo->query("SELECT Lastname,Firstname,email FROM users WHERE username = $username");
+    $q = $pdo->query("SELECT Lastname,Firstname,email FROM users WHERE username = '$username'");
     $q->setFetchMode(PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
     die("Could not connect to the database $connectstr_dbname :" . $e->getMessage());

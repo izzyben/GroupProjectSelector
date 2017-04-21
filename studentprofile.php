@@ -1,7 +1,6 @@
 <?php
 session_start();
 $username = $_SESSION['username'];
-$email = $db->query("SELECT email FROM users WHERE username = '" . $username . "'");
 ?>
 <!DOCTYPE html>
 <html lang="en">

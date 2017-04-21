@@ -321,6 +321,30 @@ section.form-container-section p.subtitle{
     text-align: start;
 }
 
+.profile-form-input {
+    padding: 8px;
+    display: block;
+    width: 50%;
+    overflow: visible;
+    font: inherit;
+    margin: 0;
+    box-sizing: inherit;
+    -webkit-appearance: textfield;
+    -webkit-writing-mode: horizontal-tb;
+    background-color: white;
+    -webkit-rtl-ordering: logical;
+    user-select: text;
+    cursor: auto;
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0;
+    text-shadow: none;
+    text-align: start;
+}
+
 .form-container-section input.user {
     background: url(../images/user.png)no-repeat 15px 7px #fff;
     background-position: 98%;

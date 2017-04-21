@@ -195,7 +195,7 @@ $username = $_SESSION['username'];
                 reader.readAsBinaryString(evt.target.files[0]);
             }
 
-            document.getElementById('fileToUpload').addEventListener('change', handleFileSelect, false);
+            document.getElementById('files').addEventListener('change', handleFileSelect, false);
         </script>
 
 
@@ -263,7 +263,7 @@ $username = $_SESSION['username'];
         <section class="form-container" style="height: auto">
             <form method="post" enctype="multipart/form-data">
                 Select image to upload:
-                <input type="file" name="fileToUpload[]" id="fileToUpload" multiple>
+                <input type="file" name="fileToUpload" id="files" multiple>
                 <output class="thumb" id="list"></output>
                 <div id="progress_bar"><div class="percent">0%</div></div>
                 <input type="submit" value="Upload Image" name="upload"><br><br>

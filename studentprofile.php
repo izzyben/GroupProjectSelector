@@ -203,7 +203,7 @@ $username = $_SESSION['username'];
             <form method="post" enctype="multipart/form-data">
                 Select image to upload:
                 <input type="file" name="fileToUpload[]" id="fileToUpload" multiple>
-                <output class="thumb" id="list"></output>
+                <output class="thumb" id="list" style="display: block"></output>
                 <input type="submit" value="Upload Image" name="upload"><br><br>
             </form>
         </section>

@@ -33,6 +33,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/material.min.css">
     <link rel="stylesheet" href="css/adminprof.css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css" />
     <style>
         #view-source {
             position: fixed;
@@ -93,6 +94,27 @@
             <button class="mdl-navigation__link tablinks" href="" onclick="openMenu(event,'Grp')"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">people</i><b style="color: #0d47a1">Groups</b></button>
             <a class="mdl-layout-spacer"></a>
         </div>
+
+
+        !--Create Group Popup Box-->
+        <section id="id01" class="modal" style="cursor:pointer">
+            <section class="modal-form animate-zoom" style="max-width: 500px; cursor:auto">
+                <section class="modal-center"><br>
+                    <span onclick="document.getElementById('id01').style.display='none'" class="closebtn closebtn-size closebtn-position closebtn:hover closebtn:focus" title="Close Form">&times</span>
+                    <img src="images/profile%20pic.jpg" alt="Change upload photo" style="width: 40%" class="changepic"
+                </section>
+                <section class="form-container">
+                    <form action="fileupload.php" method="post" enctype="multipart/form-data">
+                        Select image to upload:
+                        <input type="file" name="fileToUpload" id="fileToUpload">
+                        <input type="submit" value="Upload Image" name="upload">
+                    </form>
+                </section>
+            </section>
+        </section>
+
+
+
 
         <!--Javascript for Menu Navigation-->
         <script>

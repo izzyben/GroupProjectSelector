@@ -3,17 +3,17 @@ session_start();
 require_once 'dbconnect.php'; // Establishing connection with our database
 $username = $_SESSION['username'];
 
-// FROM (http://www.mysqltutorial.org/php-querying-data-from-mysql-table/)
-try {
-    $pdo = new PDO("mysql:host=$connectstr_dbhost;dbname=$connectstr_dbname", $connectstr_dbusername, $connectstr_dbpassword);
-
-
-
-    $q = $pdo->query("SELECT * FROM active_users ORDER BY username");
-$q->setFetchMode(PDO::FETCH_ASSOC);
-} catch (PDOException $e) {
-die("Could not connect to the database $connectstr_dbname :" . $e->getMessage());
-}
+//// FROM (http://www.mysqltutorial.org/php-querying-data-from-mysql-table/)
+//try {
+//    $pdo = new PDO("mysql:host=$connectstr_dbhost;dbname=$connectstr_dbname", $connectstr_dbusername, $connectstr_dbpassword);
+//
+//
+//
+//    $q = $pdo->query("SELECT * FROM active_users ORDER BY username");
+//$q->setFetchMode(PDO::FETCH_ASSOC);
+//} catch (PDOException $e) {
+//die("Could not connect to the database $connectstr_dbname :" . $e->getMessage());
+//}
 
 ?>
 

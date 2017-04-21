@@ -159,7 +159,7 @@ $username = $_SESSION['username'];
         <section class="form-container">
             <form action="fileupload.php" method="post" enctype="multipart/form-data">
                 Select image to upload:
-                <input type="file" name="fileToUpload[]" id="fileToUpload">
+                <input type="file" name="fileToUpload" id="fileToUpload">
                 <output id="list"></output>
                 <input type="submit" value="Upload Image" name="upload">
             </form>

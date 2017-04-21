@@ -174,7 +174,7 @@
     <section class="modal-form animate-zoom" style="max-width: 500px; cursor:auto">
         <section class="modal-center"><br>
             <header class="demo-header mdl-color--green-100 is-casting-shadow">
-                <span class="mdl-layout-title">Create Group Randomly</span>
+                <span class="mdl-layout-title">Create Random Groups</span>
                 <span onclick="document.getElementById('id01').style.display='none'" class="closebtn closebtn-size closebtn-position closebtn:hover closebtn:focus" title="Close Form">&times</span>
             </header>
             <img src="images/grouppic.png" alt="Change upload photo" style="width: 40%" class="changepic">
@@ -189,6 +189,8 @@
                 <label>Students Per Group</label>
                 <input type="range" min="2" max="10" value="2" onchange="studentNumber(this.value);">
                 <input type="text" id="studnum" value="2" style="width: 4%; border: hidden "><br><br>
+
+                <textarea autofocus="autofocus" style="width: 20em; height: 13.5em" placeholder="Please Type the Names of Students to be Grouped in a line each...." onfocus="null"></textarea>
 
             </form>
         </section>

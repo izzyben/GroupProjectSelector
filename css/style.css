@@ -324,7 +324,7 @@ section.form-container-section p.subtitle{
 .profile-form-input {
     padding: 8px;
     display: block;
-    width: 50%;
+    width: 100%;
     overflow: visible;
     font: inherit;
     margin: 0;

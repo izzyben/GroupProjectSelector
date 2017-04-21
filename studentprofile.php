@@ -1,6 +1,15 @@
 <?php
 session_start();
+include("dbconnect.php"); // Establishing connection with our database
 $username = $_SESSION['username'];
+
+$sql= query("SELECT * FROM users WHERE username=$username;");
+
+while ($result = mysqli_fetch_array($sql)){
+    $email = $result['email'];
+    $firstname = $result['Firstname'];
+    $lastname = $result['Lastname'];
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -66,9 +75,9 @@ $username = $_SESSION['username'];
     </header>
 
     <div id="Prof" style="width: 50%; margin-left: 20%">
-        <label> First Name: <?php echo $email ?> </label><br><br>
-        <label> Last Name: </label><br><br>
-        <label> Email Address: </label><br><br>
+        <label> First Name: <input value= '<?php echo $firstname; ?>'> </label><br><br>
+        <label> Last Name: <input value= '<?php echo $lastname; ?>'> </label><br><br>
+        <label> Email Address: <input value= '<?php echo $email; ?>'> </label><br><br>
     </div>
 
     <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
@@ -161,9 +170,7 @@ $username = $_SESSION['username'];
                 Select image to upload:
                 <input type="file" name="fileToUpload" id="fileToUpload">
                 <output id="list"></output>
-                <section class="demo-header">
                 <input type="submit" value="Upload Image" name="upload">
-                </section>
             </form>
         </section>
     </section>

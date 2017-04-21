@@ -3,23 +3,6 @@ session_start();
 require_once 'dbconnect.php'; // Establishing connection with our database
 $username = $_SESSION['username'];
 
-// FROM (http://www.mysqltutorial.org/php-querying-data-from-mysql-table/)
-//try {
-//    $pdo = new PDO("mysql:host=$connectstr_dbhost;dbname=$connectstr_dbname", $connectstr_dbusername, $connectstr_dbpassword);
-//
-//    $sql = 'SELECT Lastname,
-//                    Firstname,
-//                    email,
-//                    username
-//
-//               FROM users
-//              WHERE username = $username';
-//
-//    $q = $pdo->query("SELECT * FROM active_users ORDER BY username");
-//$q->setFetchMode(PDO::FETCH_ASSOC);
-//} catch (PDOException $e) {
-//die("Could not connect to the database $connectstr_dbname :" . $e->getMessage());
-//}
 
 ?>
 
@@ -78,15 +61,7 @@ $username = $_SESSION['username'];
         <div class="mdl-layout__header-row">
             <span class="mdl-layout-title">Home</span>
             <div class="mdl-layout-spacer"></div>
-            <!--<div class="mdl-textfield mdl-js-textfield mdl-textfield&#45;&#45;expandable">-->
-            <!--<label class="mdl-button mdl-js-button mdl-button&#45;&#45;icon" for="search">-->
-            <!--<i class="material-icons">search</i>-->
-            <!--</label>-->
-            <!--<div class="mdl-textfield__expandable-holder">-->
-            <!--<input class="mdl-textfield__input" type="text" id="search">-->
-            <!--<label class="mdl-textfield__label" for="search">Enter your query...</label>-->
-            <!--</div>-->
-            <!--</div>-->
+
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
                 <i class="material-icons">more_vert</i>
             </button>
@@ -99,7 +74,7 @@ $username = $_SESSION['username'];
         <header class="demo-drawer-header">
             <img src="images/user.jpg" class="demo-avatar">
             <div class="demo-avatar-dropdown">
-                <span>hello@example.com <p>Administrator</p></span>
+                <span>admin@gmail.com <p>Administrator</p></span>
                 <div class="mdl-layout-spacer"></div>
                 <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                     <i class="material-icons" role="presentation">arrow_drop_down</i>

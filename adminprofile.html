@@ -96,6 +96,37 @@
         </div>
 
 
+        <!--Javascript for Text File Upload-->
+        <script type="text/javascript">
+            function readSingleFile(evt) {
+                //Retrieve the first (and only!) File from the FileList object
+                var f = evt.target.files[0];
+
+                if (f) {
+                    var r = new FileReader();
+                    r.onload = function(e) {
+                        var contents = e.target.result;
+                        alert( "Got the file.\n"
+                            +"name: " + f.name + "\n"
+                            +"type: " + f.type + "\n"
+                            +"size: " + f.size + " bytes\n"
+                            + "starts with: " + contents.substr(1, contents.indexOf("\n"))
+                        );
+                        document.getElementById('textfilearea').value=  contents;
+                    }
+                    r.readAsText(f);
+
+                } else {
+                    alert("Failed to load file");
+                }
+            }
+
+            document.getElementById('listupload').addEventListener('change', readSingleFile, false);
+        </script>
+
+
+
+
         <!--Javascript for Menu Navigation-->
         <script>
             function openMenu(evt, menuName) {
@@ -192,7 +223,7 @@
                 <input type="range" min="2" max="10" value="2" onchange="studentNumber(this.value);">
                 <input type="text" id="studnum" value="2" style="width: 4%; border: hidden "><br><br>
 
-                <textarea autofocus="autofocus" style="width: 20em; height: 13.5em" onblur="this.placeholder='Please Type the Names of Students to be Grouped in a line each....'" onfocus="this.placeholder=''"></textarea><br>
+                <textarea autofocus="autofocus" id="textfilearea" style="width: 20em; height: 13.5em" onblur="this.placeholder='Please Type the Names of Students to be Grouped in a line each....'" onfocus="this.placeholder=''"></textarea><br>
                 <label>Upload List: </label><input type="file" name="listUpload" value="Upload List" id="listUpload">
 
             </form>

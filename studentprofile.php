@@ -36,7 +36,7 @@ $username = $_SESSION['username'];
     <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/material.min.css">
-    <link rel="stylesheet" href="css/studentprofile.css" type="text/css">
+    <link rel="stylesheet" href="css/studentprofile.css">
     <style>
         #view-source {
             position: fixed;
@@ -95,110 +95,6 @@ $username = $_SESSION['username'];
             <button class="mdl-navigation__link tablinks"  onclick="openMenu(event,'Grp')"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">people</i><b style="color: #0d47a1">Group</b></button>
             <div class="mdl-layout-spacer"></div>
         </div>
-
-
-
-
-
-
-<!--        <script>-->
-<!--            function handleFileSelect(evt) {-->
-<!--                var fileToUpload = evt.target.files; // FileList object-->
-<!---->
-<!--                // Loop through the FileList and render image files as thumbnails.-->
-<!--                for (var i = 0, f; f = fileToUpload[i]; i++) {-->
-<!---->
-<!--                    // Only process image files.-->
-<!--                    if (!f.type.match('image.*')) {-->
-<!--                        continue;-->
-<!--                    }-->
-<!---->
-<!--                    var reader = new FileReader();-->
-<!---->
-<!--                    // Closure to capture the file information.-->
-<!--                    reader.onload = (function(theFile) {-->
-<!--                        return function(e) {-->
-<!--                            // Render thumbnail.-->
-<!--                            var span = document.createElement('span');-->
-<!--                            span.innerHTML = ['<img class="thumb" src="', e.target.result,-->
-<!--                                '" title="', escape(theFile.name), '"/>'].join('');-->
-<!--                            document.getElementById('list').insertBefore(span, null);-->
-<!--                        };-->
-<!--                    })(f);-->
-<!---->
-<!--                    // Read in the image file as a data URL.-->
-<!--                    reader.readAsDataURL(f);-->
-<!--                }-->
-<!--            }-->
-<!---->
-<!--            document.getElementById('fileToUpload').addEventListener('change', handleFileSelect, false);-->
-<!--        </script>-->
-
-
-        <script>
-            var reader;
-            var progress = document.querySelector('.percent');
-
-            function abortRead() {
-                reader.abort();
-            }
-
-            function errorHandler(evt) {
-                switch(evt.target.error.code) {
-                    case evt.target.error.NOT_FOUND_ERR:
-                        alert('File Not Found!');
-                        break;
-                    case evt.target.error.NOT_READABLE_ERR:
-                        alert('File is not readable');
-                        break;
-                    case evt.target.error.ABORT_ERR:
-                        break; // noop
-                    default:
-                        alert('An error occurred reading this file.');
-                };
-            }
-
-            function updateProgress(evt) {
-                // evt is an ProgressEvent.
-                if (evt.lengthComputable) {
-                    var percentLoaded = Math.round((evt.loaded / evt.total) * 100);
-                    // Increase the progress bar length.
-                    if (percentLoaded < 100) {
-                        progress.style.width = percentLoaded + '%';
-                        progress.textContent = percentLoaded + '%';
-                    }
-                }
-            }
-
-            function handleFileSelect(evt) {
-                // Reset progress indicator on new file selection.
-                progress.style.width = '0%';
-                progress.textContent = '0%';
-
-                reader = new FileReader();
-                reader.onerror = errorHandler;
-                reader.onprogress = updateProgress;
-                reader.onabort = function(e) {
-                    alert('File read cancelled');
-                };
-                reader.onloadstart = function(e) {
-                    document.getElementById('progress_bar').className = 'loading';
-                };
-                reader.onload = function(e) {
-                    // Ensure that the progress bar displays 100% at the end.
-                    progress.style.width = '100%';
-                    progress.textContent = '100%';
-                    setTimeout("document.getElementById('progress_bar').className='';", 2000);
-                }
-
-                // Read in the image file as a binary string.
-                reader.readAsBinaryString(evt.target.files[0]);
-            }
-
-            document.getElementById('files').addEventListener('change', handleFileSelect, false);
-        </script>
-
-
 
 
         <!--Javascript for Menu Navigation-->
@@ -260,13 +156,12 @@ $username = $_SESSION['username'];
             <span onclick="document.getElementById('id03').style.display='none'" class="closebtn closebtn-size closebtn-position closebtn:hover closebtn:focus" title="Close Form">&times</span>
             <img src="images/profile%20pic.jpg" alt="Change upload photo" style="width: 40%" class="changepic"
         </section>
-        <section class="form-container" style="height: auto">
-            <form method="post" enctype="multipart/form-data">
+        <section class="form-container">
+            <form action="fileupload.php" method="post" enctype="multipart/form-data">
                 Select image to upload:
-                <input type="file" name="fileToUpload" id="files" multiple>
-                <output class="thumb" id="list"></output>
-                <div id="progress_bar"><div class="percent">0%</div></div>
-                <input type="submit" value="Upload Image" name="upload"><br><br>
+                <input type="file" name="fileToUpload[]" id="fileToUpload">
+                <output id="list"></output>
+                <input type="submit" value="Upload Image" name="upload">
             </form>
         </section>
     </section>

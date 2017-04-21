@@ -3,6 +3,7 @@ session_start();
 require_once 'dbconnect.php'; // Establishing connection with our database
 $username = $_SESSION['username'];
 
+// FROM (http://www.mysqltutorial.org/php-querying-data-from-mysql-table/)
 try {
     $pdo = new PDO("mysql:host=$connectstr_dbhost;dbname=$connectstr_dbname", $connectstr_dbusername, $connectstr_dbpassword);
 
@@ -83,7 +84,7 @@ try {
                 <li class="mdl-menu__item"><a href="index.html"> Logout</a></li>
             </ul>
         </div>
-    </header>
+    </header><br><br>
 
     <div id="Prof" style="width: 50%; margin-left: 20%">
         <?php while ($row = $q->fetch()): ?>

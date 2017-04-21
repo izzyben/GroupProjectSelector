@@ -12,7 +12,7 @@ try {
                     username
                     
                FROM users
-              ORDER BY lastname';
+              WHERE username = $username';
 
     $q = $pdo->query($sql);
     $q->setFetchMode(PDO::FETCH_ASSOC);

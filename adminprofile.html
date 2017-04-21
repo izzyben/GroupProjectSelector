@@ -125,6 +125,10 @@
             function groupNumber(val) {
                 document.getElementById('grpnum').value=val;
             }
+
+            function studentNumber(val) {
+                document.getElementById('studnum').value=val;
+            }
         </script>
 
 
@@ -179,11 +183,12 @@
                 <input class="profilename" type="text" value="Optional" style=" border-radius: 10% ;width: 50%;-webkit-appearance: textfield;-webkit-writing-mode: horizontal-tb;background-color: white;-webkit-rtl-ordering: logical;user-select: text"><br><br>
 
                 <label>Number of Groups</label>
-                <input type="range" min="2" max="30" value="2"><br><br>
+                <input type="range" min="2" max="30" value="2" onchange="groupNumber(this.value);">
+                <input type="text" id="grpnum" value="2" style="width: 4%; border: hidden "><br><br>
 
                 <label>Students Per Group</label>
-                <input type="range" min="2" max="10" value="2" onchange="groupNumber(this.value);">
-                <input type="text" id="grpnum" value="2" style="width: 4%; border: hidden "><br><br>
+                <input type="range" min="2" max="10" value="2" onchange="studentNumber(this.value);">
+                <input type="text" id="studnum" value="2" style="width: 4%; border: hidden "><br><br>
 
             </form>
         </section>

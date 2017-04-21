@@ -199,12 +199,13 @@ $username = $_SESSION['username'];
             <span onclick="document.getElementById('id03').style.display='none'" class="closebtn closebtn-size closebtn-position closebtn:hover closebtn:focus" title="Close Form">&times</span>
             <img src="images/profile%20pic.jpg" alt="Change upload photo" style="width: 40%" class="changepic"
         </section>
-        <section class="form-container">
+        <section class="form-container" style="height: auto">
             <form method="post" enctype="multipart/form-data">
                 Select image to upload:
                 <input type="file" name="fileToUpload[]" id="fileToUpload">
-                <input class="thumb" id="list"> </input>
+                <output class="thumb" id="list"> </output>
                 <input type="submit" value="Upload Image" name="upload">
+                <output class="thumb" id="list"> </output>
             </form>
         </section>
     </section>

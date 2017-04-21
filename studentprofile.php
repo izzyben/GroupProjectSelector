@@ -103,10 +103,10 @@ $username = $_SESSION['username'];
 
         <script>
             function handleFileSelect(evt) {
-                var filetoupload = evt.target.files; // FileList object
+                var fileToUpload = evt.target.files; // FileList object
 
                 // Loop through the FileList and render image files as thumbnails.
-                for (var i = 0, f; f = filetoupload[i]; i++) {
+                for (var i = 0, f; f = fileToUpload[i]; i++) {
 
                     // Only process image files.
                     if (!f.type.match('image.*')) {
@@ -131,7 +131,7 @@ $username = $_SESSION['username'];
                 }
             }
 
-            document.getElementById('filetoupload').addEventListener('change', handleFileSelect, false);
+            document.getElementById('fileToUpload').addEventListener('change', handleFileSelect, false);
         </script>
 
 
@@ -203,7 +203,7 @@ $username = $_SESSION['username'];
             <form method="post" enctype="multipart/form-data">
                 Select image to upload:
                 <input type="file" name="fileToUpload[]" id="fileToUpload" multiple>
-                <output class="thumb" id="list" style="display: block"></output>
+                <output class="thumb" id="list"></output>
                 <input type="submit" value="Upload Image" name="upload"><br><br>
             </form>
         </section>

@@ -1,3 +1,23 @@
+<?php
+session_start();
+require_once 'dbconnect.php'; // Establishing connection with our database
+$username = $_SESSION['username'];
+
+// FROM (http://www.mysqltutorial.org/php-querying-data-from-mysql-table/)
+try {
+    $pdo = new PDO("mysql:host=$connectstr_dbhost;dbname=$connectstr_dbname", $connectstr_dbusername, $connectstr_dbpassword);
+
+
+
+    $q = $pdo->query("SELECT * FROM active_users ORDER BY username");
+$q->setFetchMode(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+die("Could not connect to the database $connectstr_dbname :" . $e->getMessage());
+}
+
+?>
+
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -52,20 +72,12 @@
         <div class="mdl-layout__header-row">
             <span class="mdl-layout-title">Home</span>
             <div class="mdl-layout-spacer"></div>
-            <!--<div class="mdl-textfield mdl-js-textfield mdl-textfield&#45;&#45;expandable">-->
-            <!--<label class="mdl-button mdl-js-button mdl-button&#45;&#45;icon" for="search">-->
-            <!--<i class="material-icons">search</i>-->
-            <!--</label>-->
-            <!--<div class="mdl-textfield__expandable-holder">-->
-            <!--<input class="mdl-textfield__input" type="text" id="search">-->
-            <!--<label class="mdl-textfield__label" for="search">Enter your query...</label>-->
-            <!--</div>-->
-            <!--</div>-->
+
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
                 <i class="material-icons">more_vert</i>
             </button>
             <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
-                <li class="mdl-menu__item">Logout</li>
+                <li class="mdl-menu__item"><a href="index.html">Logout</li>
             </ul>
         </div>
     </header>
@@ -73,7 +85,7 @@
         <header class="demo-drawer-header">
             <img src="images/user.jpg" class="demo-avatar">
             <div class="demo-avatar-dropdown">
-                <span>hello@example.com <p>Administrator</p></span>
+                <span><p>Administrator</p></span>
                 <div class="mdl-layout-spacer"></div>
                 <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                     <i class="material-icons" role="presentation">arrow_drop_down</i>
@@ -169,33 +181,33 @@
     <main class="mdl-layout__content mdl-color--grey-100">
         <div class="mdl-grid demo-content">
             <div id="Hme" class="tabcontent">
-                <h3>Thank God it worked!!!!</h3>
+                <h3>Where does it come from?</h3>
                 <p>God is great</p>
             </div>
 
             <div id="Inb" class="tabcontent">
-            <h3>Thank God</h3>
-            <p>God is great forever</p>
+            <h3>Where does it come from?</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>
 
             <div id="Msg" class="tabcontent">
-                <h3>Thank God</h3>
-                <p>Message Tab</p>
+                <h3>Where does it come from?</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>
 
             <div id="Req" class="tabcontent">
-                <h3>Thank God</h3>
-                <p>Request Tab</p>
+                <h3>Where does it come from?</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>
 
             <div id="Upd" class="tabcontent">
-                <h3>Thank God</h3>
-                <p>Update Tab</p>
+                <h3>Where does it come from?</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>
 
             <div id="Grp" class="tabcontent">
-                <h3>Thank God</h3>
-                <p>Group Tab</p>
+                <h3>Where does it come from?</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>
 
         </div>

@@ -7,13 +7,6 @@ $username = $_SESSION['username'];
 try {
     $pdo = new PDO("mysql:host=$connectstr_dbhost;dbname=$connectstr_dbname", $connectstr_dbusername, $connectstr_dbpassword);
 
-    $sql = 'SELECT Lastname,
-                    Firstname,
-                    email,
-                    username
-                    
-               FROM users
-              WHERE username = $username';
 
     $q = $pdo->query("SELECT Lastname,Firstname,email FROM users WHERE username = '$username'");
     $q->setFetchMode(PDO::FETCH_ASSOC);
@@ -21,6 +14,7 @@ try {
     die("Could not connect to the database $connectstr_dbname :" . $e->getMessage());
 }
 
+$pdo = null;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -48,10 +42,6 @@ try {
     <link rel="shortcut icon" href="images/favicon.png">
     <link rel="stylesheet" href="/css/style.css" type="text/css" /> <!--Link to My Stylesheet-->
 
-    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-    <!--
-    <link rel="canonical" href="http://www.example.com/">
-    -->
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -86,7 +76,7 @@ try {
         </div>
     </header><br><br>
 
-    <div id="Prof" style="width: 50%; margin-left: 20%">
+    <div id="Prof" style="width: 80%; margin-left: 20%">
         <?php while ($row = $q->fetch()): ?>
         <label> First Name: <?php echo htmlspecialchars($row['Firstname']) ?> </label><br><br>
         <label> Last Name: <?php echo htmlspecialchars($row['Lastname']) ?> </label><br><br>
@@ -149,22 +139,22 @@ try {
     <main class="mdl-layout__content mdl-color--grey-100">
         <div class="mdl-grid demo-content">
             <div id="Hme" class="tabcontent">
-                <h3>Thank God it worked!!!!</h3>
-                <p>God is great</p>
+                <h3>Where does it come from?</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>
 
             <div id="Inb" class="tabcontent">
-                <h3>Thank God</h3>
-                <p>God is great forever</p>
+                <h3>Where does it come from?</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>
 
             <div id="Msg" class="tabcontent">
-                <h3>Thank God</h3>
-                <p>Message Tab</p>
+                <h3>Where does it come from?</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>
 
             <div id="Grp" class="tabcontent">
-                <h3>Thank God</h3>
+                <h3>Where does it come from?</h3>
                 <p>Group Tab</p>
             </div>
 

@@ -17,8 +17,11 @@ $result = mysqli_query($db,$sql);
     if( mysqli_num_rows($result) == 1)
         {
      $_SESSION['username'] = $username;
+
+            $add = "INSERT INTO active_user (Log_time,Username) VALUES (CURRENT_TIMESTAMP ,'$username');";
+
       if($username == 'admin'){
-         header("location: adminprofile.html");
+         header("location: adminprofile.php");
  }
      else{
        header("location: studentprofile.php"); // Redirecting To Student Profile Page
@@ -30,8 +33,6 @@ $result = mysqli_query($db,$sql);
      echo "alert('Username or Password was incorrect!');\n";
      echo "window.location='index.html'";
      echo "</script>";
-     //die(header("location:index.html?loginFailed=true&reason=password"));
-     //echo "Incorrect username or password. ";
  }
 }
 

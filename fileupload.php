@@ -1,13 +1,8 @@
 <?php
 session_start();
 $username = $_SESSION['username'];
-/**
- * Created by PhpStorm.
- * User: Izzy Ben
- * Date: 19/04/2017
- * Time: 18:26
- */
 
+//From W3Schools
 $target_dir = "picuploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;

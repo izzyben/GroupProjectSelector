@@ -161,7 +161,7 @@ $username = $_SESSION['username'];
                 Select image to upload:
                 <input type="file" name="fileToUpload" id="fileToUpload">
                 <output id="list"></output>
-                <section>
+                <section class="demo-header">
                 <input type="submit" value="Upload Image" name="upload">
                 </section>
             </form>

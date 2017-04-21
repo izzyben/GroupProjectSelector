@@ -71,7 +71,7 @@ $pdo = null;
                 <i class="material-icons">more_vert</i>
             </button>
             <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
-                <li class="mdl-menu__item"><a href="index.html"> Logout</a></li>
+                <li class="mdl-menu__item"><a href="index.html"><?php session_abort(); ?> Logout</a></li>
             </ul>
         </div>
     </header><br><br>

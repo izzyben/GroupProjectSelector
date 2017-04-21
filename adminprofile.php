@@ -77,7 +77,7 @@ die("Could not connect to the database $connectstr_dbname :" . $e->getMessage())
                 <i class="material-icons">more_vert</i>
             </button>
             <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
-                <li class="mdl-menu__item"><a href="index.html">Logout</li>
+                <li class="mdl-menu__item"><a href="index.html"><?php session_abort(); ?>Logout</li>
             </ul>
         </div>
     </header>

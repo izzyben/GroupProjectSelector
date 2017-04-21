@@ -1,15 +1,25 @@
 <?php
 session_start();
-include("dbconnect.php"); // Establishing connection with our database
+require_once 'dbconnect.php'; // Establishing connection with our database
 $username = $_SESSION['username'];
 
-$sql= $db -> query("SELECT * FROM users WHERE username=$username;");
+try {
+    $pdo = new PDO("mysql:host=$connectstr_dbhost;dbname=$connectstr_dbname", $connectstr_dbusername, $connectstr_dbpassword);
 
-while ($result = mysqli_fetch_array($sql)){
-    $email = $result['email'];
-    $firstname = $result['Firstname'];
-    $lastname = $result['Lastname'];
+    $sql = 'SELECT Lastname,
+                    Firstname,
+                    email,
+                    username
+                    
+               FROM users
+              ORDER BY lastname';
+
+    $q = $pdo->query($sql);
+    $q->setFetchMode(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    die("Could not connect to the database $connectstr_dbname :" . $e->getMessage());
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -60,22 +70,6 @@ while ($result = mysqli_fetch_array($sql)){
 </head>
 <body>
 
-<?php
-session_start();
-include("dbconnect.php"); // Establishing connection with our database
-$username = $_SESSION['username'];
-
-$sql= $db-> query("SELECT * FROM users WHERE username=$username;");
-
-while ($result = mysqli_fetch_array($sql)){
-    $email = $result['email'];
-    $firstname = $result['Firstname'];
-    $lastname = $result['Lastname'];
-}
-?>
-
-
-
 <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
     <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
         <div class="mdl-layout__header-row">
@@ -92,9 +86,11 @@ while ($result = mysqli_fetch_array($sql)){
     </header>
 
     <div id="Prof" style="width: 50%; margin-left: 20%">
-        <label> First Name: <input value= '<?php echo $firstname; ?>'> </label><br><br>
-        <label> Last Name: <input value= '<?php echo $lastname; ?>'> </label><br><br>
-        <label> Email Address: <input value= '<?php echo $email; ?>'> </label><br><br>
+        <?php while ($row = $q->fetch()): ?>
+        <label> First Name: <?php echo htmlspecialchars($row['Firstname']) ?> </label><br><br>
+        <label> Last Name: <?php echo htmlspecialchars($row['Lastname']) ?> </label><br><br>
+        <label> Email Address: <?php echo htmlspecialchars($row['email']) ?> </label><br><br>
+        <?php endwhile; ?>
     </div>
 
     <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">

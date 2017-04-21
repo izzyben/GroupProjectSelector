@@ -36,7 +36,7 @@ $username = $_SESSION['username'];
     <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/material.min.css">
-    <link rel="stylesheet" href="css/studentprofile.css">
+    <link rel="stylesheet" href="css/studentprofile.css" type="text/css">
     <style>
         #view-source {
             position: fixed;

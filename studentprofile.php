@@ -1,6 +1,7 @@
 <?php
 session_start();
 $username = $_SESSION['username'];
+$email = $db->query("SELECT email FROM users WHERE username = '" . $username . "'");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -66,7 +67,7 @@ $username = $_SESSION['username'];
     </header>
 
     <div id="Prof" style="width: 50%; margin-left: 20%">
-        <label> First Name: </label><br><br>
+        <label> First Name: <?php echo $email ?> </label><br><br>
         <label> Last Name: </label><br><br>
         <label> Email Address: </label><br><br>
     </div>
